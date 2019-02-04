@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import { interopDefault } from './utils'
 
+const _28cc2a8c = () => interopDefault(import('../node_modules/@nuxt/vue-app/template/pages/index.vue' /* webpackChunkName: "" */))
+
 Vue.use(Router)
 
 if (process.client) {
@@ -62,7 +64,10 @@ export function createRouter() {
     linkExactActiveClass: 'nuxt-link-exact-active',
     scrollBehavior,
 
-    routes: [],
+    routes: [{
+      path: "",
+      component: _28cc2a8c
+    }],
 
     fallback: false
   })

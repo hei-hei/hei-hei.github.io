@@ -6,7 +6,7 @@ import _6f6c098b from './layouts/default.vue'
 const layouts = { "_default": _6f6c098b }
 
 export default {
-  head: {"title":"황희영의 포트폴리오","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"My cool Nuxt.js project"},{"property":"og:title","content":"황희영의 포트폴리오"},{"property":"og:description","content":"헤이! 안녕 헤이!🙌"},{"property":"og:image","content":"https:\u002F\u002Fimages.velog.io\u002Fpost-images\u002Fchris\u002F892e0f80-278d-11e9-a56f-a10040ddcb91\u002Fheithumbnailx600.png"}],"link":[{"rel":"shortcut icon","href":"https:\u002F\u002Fres.cloudinary.com\u002Fdvcuac7zg\u002Fimage\u002Fupload\u002Fc_scale,w_128\u002Fv1549212513\u002Fheihei\u002FKakaoTalk_Photo_2019-02-04-01-48-06.png"},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fgh\u002Fmoonspam\u002FNanumSquare@1.0\u002Fnanumsquare.css"}],"script":[{"src":"https:\u002F\u002Fplayer.vimeo.com\u002Fapi\u002Fplayer.js"}],"style":[]},
+  head: {"meta":[],"link":[],"style":[],"script":[]},
 
   render(h, props) {
     const loadingEl = h('NuxtLoading', { ref: 'loading' })
