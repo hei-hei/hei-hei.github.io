@@ -10,16 +10,16 @@
         <img class="icon"
              src="https://images.velog.io/post-images/chris/4503c4b0-27cb-11e9-a740-67ba1a06b5dd/aeicon.svg">
         <img class="icon"
+             src="https://images.velog.io/post-images/chris/4cc9f8e0-27cb-11e9-b8bc-4b35831033fa/psicon.svg">
+        <img class="icon"
              src="https://images.velog.io/post-images/chris/09ddb580-27cb-11e9-a740-67ba1a06b5dd/ipadicon.svg">
-             <img class="icon"
-             src="https://images.velog.io/post-images/chris/3e5d4b90-287f-11e9-aaec-41893bf0d684/c4dicon.svg">
       </div>
       <div class="desc">
         Lico애니메이션의 특별영상
       </div>
     </div>
     <div class="rect">
-      <iframe src="https://player.vimeo.com/video/315176942?autoplay=1&loop=1&muted=1&autopause=0&background=1&title=0&byline=0"
+      <iframe src="https://player.vimeo.com/video/315234880?autoplay=1&loop=1&muted=1&autopause=0&background=1&title=0&byline=0"
               ref="player"
               id="player"
               class="video"
@@ -27,7 +27,7 @@
               :height="width*9/16"
               frameborder="0"></iframe></div>
     <div class="rect">
-      <iframe src="https://player.vimeo.com/video/315176680?autoplay=1&loop=1&muted=1&autopause=0&background=1&title=0&byline=0"
+      <iframe src="https://player.vimeo.com/video/315234640?autoplay=1&loop=1&muted=1&autopause=0&background=1&title=0&byline=0"
               ref="player"
               id="player"
               class="video"
@@ -74,7 +74,7 @@ export default {
     CopyRight,
   },
   data: () => ({
-    width: window.innerWidth,
+    width: window.innerWidth >= 500 ? 500 : window.innerWidth,
   }),
   mounted() {
     window.addEventListener('resize', this.windowResized)
@@ -82,10 +82,10 @@ export default {
   },
   methods: {
     windowResized() {
-      this.width = window.innerWidth
+      this.width = window.innerWidth <= 500 ? window.innerWidth : this.width
     },
     scaledImage(url) {
-      return url.slice(0, 50) + 'c_scale,q_95,w_750/' + url.slice(50)
+      return url.slice(0, 50) + 'c_scale,w_750/' + url.slice(50)
     },
   },
   beforeDestroy() {

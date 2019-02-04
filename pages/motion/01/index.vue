@@ -19,22 +19,13 @@
       </div>
     </div>
     <div class="rect">
-      <!-- <iframe src="https://player.vimeo.com/video/315088638?autoplay=1&loop=1&muted=1&autopause=0&background=1&title=0&byline=0"
-              ref="player"
-              id="player"
-              class="video"
-              :width="width"
-              :height="width*16/9"
-              frameborder="0"></iframe> -->
-      <iframe src="https://player.vimeo.com/video/315118224?autoplay=1&loop=1&muted=1&autopause=0&background=1&title=0&byline=0"
+      <iframe src="https://player.vimeo.com/video/315234345?autoplay=1&loop=1&muted=1&autopause=0&background=1&title=0&byline=0"
               ref="player"
               id="player"
               class="video"
               :width="width"
               :height="width*16/9"
               frameborder="0"></iframe>
-      <!-- <img class="image"
-           src="https://res.cloudinary.com/dvcuac7zg/image/upload/v1549216305/heihei/intro_motion.gif"> -->
     </div>
     <div class="text">
       감정의 덩어리가 목에서 탁 하고 걸리다.<br><br>
@@ -96,7 +87,7 @@ export default {
       this.width = window.innerWidth <= 500 ? window.innerWidth : this.width
     },
     scaledImage(url) {
-      return url.slice(0, 50) + 'c_scale,q_95,w_750/' + url.slice(50)
+      return url.slice(0, 50) + 'c_scale,w_750/' + url.slice(50)
     },
   },
   beforeDestroy() {
@@ -170,6 +161,8 @@ export default {
     .video {
       position: absolute;
       top: 0;
+      display: block;
+      width: 100%;
       /* height: 100%; */
       /* touch-action: pan-y !important; */
       z-index: -1;

@@ -5,35 +5,36 @@
            @click="$router.go(-1)"
            src="https://images.velog.io/post-images/chris/34975800-2788-11e9-a89e-513e433f9a41/arrowleft.svg">
       <div class="caption">Tools</div>
-      <div class="title">연애 하루 전 8bit</div>
+      <div class="title">검정치마체</div>
       <div class="tools">
         <img class="icon"
-             src="https://images.velog.io/post-images/chris/4503c4b0-27cb-11e9-a740-67ba1a06b5dd/aeicon.svg">
+             src="https://images.velog.io/post-images/chris/ae55a190-286b-11e9-b507-dfed5458c07c/ailogo.svg">
         <img class="icon"
              src="https://images.velog.io/post-images/chris/09ddb580-27cb-11e9-a740-67ba1a06b5dd/ipadicon.svg">
-             <img class="icon"
-             src="https://images.velog.io/post-images/chris/3e5d4b90-287f-11e9-aaec-41893bf0d684/c4dicon.svg">
       </div>
       <div class="desc">
-        Lico애니메이션의 특별영상
+        밴드 검정치마의 분위기를 폰트로
       </div>
     </div>
-    <div class="rect">
-      <iframe src="https://player.vimeo.com/video/315235195?autoplay=1&loop=1&muted=1&autopause=0&background=1&title=0&byline=0"
-              ref="player"
-              id="player"
-              class="video"
-              :width="width"
-              :height="width*9/16"
-              frameborder="0"></iframe></div>
+    <img class="image"
+         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287789/heihei/typo_d_%E1%84%80%E1%85%A5%E1%86%B7%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%8E%E1%85%B5%E1%84%86%E1%85%A1%E1%84%8E%E1%85%A6_%E1%84%86%E1%85%A9%E1%84%8B%E1%85%B3%E1%86%B7.jpg'">
     <div class="text">
-      피키캐스트에서 할로윈 시기에 맞추어 앱 시작할 때, 나타나는<br>
-      이미지 피키캐스트의 캐릭터들을 활용하여 제작했습니다.<br>
+      감정의 덩어리가 목에서 탁 하고 걸리다.<br>
       <br>
-      2초가량의 짧은 짤이지만 다양한 움직임을 보여주려했습니다.<br>
+      갑작스럽게 걸려버린 감정 덩어리를<br>
+      가만히 바라보다가 기분이 이상해진다.<br>
+      물 위에 떠 있는 듯이,<br>
+      편안하지만 불편한 느낌이다<br>
+    </div>
+    <img class="image"
+         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287789/heihei/typo_d_%E1%84%80%E1%85%A5%E1%86%B7%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%8E%E1%85%B5%E1%84%86%E1%85%A1%E1%84%8E%E1%85%A6.jpg'">
+    <div class="text">
+      감정의 덩어리가 목에서 탁 하고 걸리다.<br>
       <br>
-      아이패드로 이미지를 제작하고 에펙으로 움직임을 준 뒤<br>
-      포토샵에서 마무리 작업을 했습니다.
+      갑작스럽게 걸려버린 감정 덩어리를<br>
+      가만히 바라보다가 기분이 이상해진다.<br>
+      물 위에 떠 있는 듯이,<br>
+      편안하지만 불편한 느낌이다<br>
     </div>
     <copy-right />
   </section>
@@ -47,7 +48,7 @@ export default {
     CopyRight,
   },
   data: () => ({
-    width: window.innerWidth >= 500 ? 500 : window.innerWidth,
+    width: window.innerWidth,
   }),
   mounted() {
     window.addEventListener('resize', this.windowResized)
@@ -55,10 +56,10 @@ export default {
   },
   methods: {
     windowResized() {
-      this.width = window.innerWidth <= 500 ? window.innerWidth : this.width
+      this.width = window.innerWidth
     },
     scaledImage(url) {
-      return url.slice(0, 50) + 'c_scale,w_750/' + url.slice(50)
+      return url.slice(0, 50) + 'c_scale/' + url.slice(50)
     },
   },
   beforeDestroy() {
@@ -124,23 +125,13 @@ export default {
     }
   }
   .rect {
-    padding-top: 56.25%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     position: relative;
     font-weight: normal;
     line-height: 17px;
     font-size: 12px;
-    .video {
-      position: absolute;
-      top: 0;
-      /* margin: 0; */
-      display: block;
-      z-index: -1;
-      /* height: 100%; */
-    }
     .image {
-      width: 100%;
-      position: absolute;
-      top: 0;
     }
     &::before {
       z-index: 999;
@@ -158,10 +149,10 @@ export default {
   .text {
     margin-top: 24px;
     margin-left: 37px;
-    margin-right: 37px;
     margin-bottom: 30px;
     line-height: 19px;
     font-size: 12px;
+    margin-right: 37px;
     color: rgba(0, 0, 0, 0.54);
   }
   .image {

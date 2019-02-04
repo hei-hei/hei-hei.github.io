@@ -11,7 +11,7 @@
     <div class="rect"
          v-for="item in list"
          :key="item.number"
-         :style="{'background-color': item.color, color:item.number === '03' ? 'white' : 'black'}"
+         :style="{'background-color': item.color, color:['04','05'].indexOf(item.number) !== -1 ? 'white' : 'black'}"
          @click="$router.push(`${$route.name}/${item.number}`)">
       <img class="background"
            :src="item.url">
@@ -19,11 +19,17 @@
       <div class="type">{{ item.type }}</div>
       <div class="number">{{ item.number }}</div>
     </div>
+    <copy-right />
   </section>
 </template>
 
 <script>
+import CopyRight from '@/components/CopyRight.vue'
+
 export default {
+  components: {
+    CopyRight,
+  },
   data() {
     return {
       width: window.innerWidth,
@@ -33,42 +39,54 @@ export default {
           type: 'contents design',
           number: '01',
           color: '#E53786',
-          url: '',
+          url: this.scaledImage(
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290123/heihei/jam_card_thumbnail.jpg',
+          ),
         },
         {
           name: '소핫',
           type: 'contents design',
           number: '02',
           color: '#F4F4F4',
-          url: '',
+          url: this.scaledImage(
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290133/heihei/sohot_card_thumbnail.jpg',
+          ),
         },
         {
           name: '지식탐탐',
           type: 'contents design',
           number: '03',
           color: '#202020',
-          url: '',
+          url: this.scaledImage(
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290391/heihei/tamyam_card_thumbnail-1.jpg',
+          ),
         },
         {
           name: '아카이브',
           type: 'contents design',
           number: '04',
           color: '#F4F4F4',
-          url: '',
+          url: this.scaledImage(
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290116/heihei/archive_card_thumbnail.jpg',
+          ),
         },
         {
           name: 'piki enter',
           type: 'contents design',
           number: '05',
           color: '#F4F4F4',
-          url: '',
+          url: this.scaledImage(
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290083/heihei/enter_card_thumbnail.jpg',
+          ),
         },
         {
           name: 'dode',
           type: 'logo design',
           number: '06',
           color: '#F4F4F4',
-          url: '',
+          url: this.scaledImage(
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290095/heihei/dode_card_thumbnail.jpg',
+          ),
         },
       ],
     }
@@ -82,7 +100,7 @@ export default {
       this.width = window.innerWidth
     },
     scaledImage(url) {
-      return url && url.slice(0, 50) + 'c_scale,q_95,w_750/' + url.slice(50)
+      return url && url.slice(0, 50) + 'c_scale,w_750/' + url.slice(50)
     },
   },
   beforeDestroy() {

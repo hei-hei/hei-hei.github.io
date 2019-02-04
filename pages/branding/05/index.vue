@@ -16,13 +16,15 @@
         엔터테이먼트 에디터, 피키엔터의 로고 디자인
       </div>
     </div>
-    <iframe src="https://player.vimeo.com/video/315221153?autoplay=1&loop=1&muted=1&autopause=0&background=1&title=0&byline=0"
-            ref="player"
-            id="player"
-            class="video"
-            :width="width"
-            :height="width"
-            frameborder="0"></iframe>
+    <div class="rect">
+      <iframe src="https://player.vimeo.com/video/315238389?autoplay=1&loop=1&muted=1&autopause=0&background=1&title=0&byline=0"
+              ref="player"
+              id="player"
+              class="video"
+              :width="width"
+              :height="width"
+              frameborder="0"></iframe>
+    </div>
     <div class="text">
       감정의 덩어리가 목에서 탁 하고 걸리다.<br>
       <br>
@@ -49,7 +51,7 @@ export default {
     CopyRight,
   },
   data: () => ({
-    width: window.innerWidth,
+    width: window.innerWidth >= 500 ? 500 : window.innerWidth,
   }),
   mounted() {
     window.addEventListener('resize', this.windowResized)
@@ -57,7 +59,7 @@ export default {
   },
   methods: {
     windowResized() {
-      this.width = window.innerWidth
+      this.width = window.innerWidth <= 500 ? window.innerWidth : this.width
     },
     scaledImage(url) {
       return url.slice(0, 50) + 'c_scale/' + url.slice(50)
@@ -126,12 +128,19 @@ export default {
     }
   }
   .rect {
-    display: grid;
-    grid-template-columns: 1fr 8px 1fr;
+    padding-top: 100%;
     position: relative;
     font-weight: normal;
     line-height: 17px;
     font-size: 12px;
+    .video {
+      position: absolute;
+      top: 0;
+      /* margin: 0; */
+      display: block;
+      z-index: -1;
+      /* height: 100%; */
+    }ㄴ
     .image {
     }
     &::before {

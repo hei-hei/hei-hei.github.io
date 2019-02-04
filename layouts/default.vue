@@ -34,6 +34,10 @@ body,
   -webkit-overflow-scrolling: touch;
 }
 html {
+  /* background-color: black; */
+}
+#__nuxt {
+  /* background-color: white; */
   position: absolute;
   width: 100%;
   max-width: 500px;
@@ -41,6 +45,9 @@ html {
   margin: auto;
   left: 0;
   right: 0;
+  border-left: solid calc(50vw - 250px) black;
+  border-right: solid calc(50vw - 250px) black;
+  box-sizing: content-box;
 }
 
 #__nuxt {

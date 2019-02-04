@@ -5,35 +5,52 @@
            @click="$router.go(-1)"
            src="https://images.velog.io/post-images/chris/34975800-2788-11e9-a89e-513e433f9a41/arrowleft.svg">
       <div class="caption">Tools</div>
-      <div class="title">연애 하루 전 8bit</div>
+      <div class="title">C4D</div>
       <div class="tools">
         <img class="icon"
              src="https://images.velog.io/post-images/chris/4503c4b0-27cb-11e9-a740-67ba1a06b5dd/aeicon.svg">
         <img class="icon"
-             src="https://images.velog.io/post-images/chris/09ddb580-27cb-11e9-a740-67ba1a06b5dd/ipadicon.svg">
-             <img class="icon"
              src="https://images.velog.io/post-images/chris/3e5d4b90-287f-11e9-aaec-41893bf0d684/c4dicon.svg">
       </div>
       <div class="desc">
-        Lico애니메이션의 특별영상
+        3d 작업물 모음
       </div>
     </div>
     <div class="rect">
-      <iframe src="https://player.vimeo.com/video/315235195?autoplay=1&loop=1&muted=1&autopause=0&background=1&title=0&byline=0"
+      <iframe src="https://player.vimeo.com/video/315234295?autoplay=1&loop=1&muted=1&autopause=0&background=1&title=0&byline=0"
               ref="player"
               id="player"
               class="video"
               :width="width"
               :height="width*9/16"
-              frameborder="0"></iframe></div>
+              frameborder="0"></iframe>
+    </div>
+    <img class="image"
+         :style="{'margin-top': '8px'}"
+         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287791/heihei/%E1%84%86%E1%85%A9%E1%84%89%E1%85%A7%E1%86%AB_01_%E1%84%87%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%BC.jpg'">
     <div class="text">
-      피키캐스트에서 할로윈 시기에 맞추어 앱 시작할 때, 나타나는<br>
-      이미지 피키캐스트의 캐릭터들을 활용하여 제작했습니다.<br>
-      <br>
-      2초가량의 짧은 짤이지만 다양한 움직임을 보여주려했습니다.<br>
-      <br>
-      아이패드로 이미지를 제작하고 에펙으로 움직임을 준 뒤<br>
-      포토샵에서 마무리 작업을 했습니다.
+      c4d로 공간감과 구성을 표현하기 위해 알파벳을 응용해서 영상과 이미지를 만들었습니다.
+    </div>
+    <img class="image"
+         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287789/heihei/baaaaaaam_light.jpg'">
+    <img class="image"
+         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287789/heihei/baaaam_rigging.jpg'">
+    <div class="text">
+      다양한 질감표현을 연습하기 위해 한 가지 오브젝트에 다양한
+      효과와 라이트를 넣은 이미지입니다.
+    </div>
+    <div class="rect">
+      <iframe src="https://player.vimeo.com/video/315234321?autoplay=1&loop=1&muted=1&autopause=0&background=1&title=0&byline=0"
+              ref="player"
+              id="player"
+              class="video"
+              :width="width"
+              :height="width*9/16"
+              frameborder="0"></iframe>
+    </div>
+    <div class="text">
+      캐릭터의 걸음걸이와 Rigging에 대해 공부하기 위해서 만든
+      걸어가는 레몬입니다.
     </div>
     <copy-right />
   </section>
@@ -58,7 +75,7 @@ export default {
       this.width = window.innerWidth <= 500 ? window.innerWidth : this.width
     },
     scaledImage(url) {
-      return url.slice(0, 50) + 'c_scale,w_750/' + url.slice(50)
+      return url.slice(0, 50) + 'c_scale/' + url.slice(50)
     },
   },
   beforeDestroy() {
@@ -124,11 +141,11 @@ export default {
     }
   }
   .rect {
-    padding-top: 56.25%;
     position: relative;
     font-weight: normal;
     line-height: 17px;
     font-size: 12px;
+    padding-top: 56.25%;
     .video {
       position: absolute;
       top: 0;
@@ -138,9 +155,8 @@ export default {
       /* height: 100%; */
     }
     .image {
+      display: block;
       width: 100%;
-      position: absolute;
-      top: 0;
     }
     &::before {
       z-index: 999;
@@ -158,10 +174,10 @@ export default {
   .text {
     margin-top: 24px;
     margin-left: 37px;
-    margin-right: 37px;
     margin-bottom: 30px;
     line-height: 19px;
     font-size: 12px;
+    margin-right: 37px;
     color: rgba(0, 0, 0, 0.54);
   }
   .image {

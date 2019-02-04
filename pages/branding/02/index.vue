@@ -37,6 +37,26 @@
          :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282765/heihei/%E1%84%89%E1%85%A9%E1%84%92%E1%85%A1%E1%86%BA_%E1%84%90%E1%85%A6%E1%86%B7%E1%84%91%E1%85%B3%E1%86%AF%E1%84%85%E1%85%B5%E1%86%BA_%E1%84%86%E1%85%A9%E1%84%8B%E1%85%B3%E1%86%B7%E1%84%8C%E1%85%B5%E1%86%B8.jpg'">
     <div class="rect"
          :style="{'margin-top': '8px'}">
+      <iframe src="https://player.vimeo.com/video/315238701?autoplay=1&loop=1&muted=1&autopause=0&background=1&title=0&byline=0"
+              ref="player"
+              id="player"
+              class="video"
+              :width="width"
+              :height="width"
+              frameborder="0"></iframe>
+    </div>
+    <div class="rect"
+         :style="{'margin-top': '8px'}">
+      <iframe src="https://player.vimeo.com/video/315238678?autoplay=1&loop=1&muted=1&autopause=0&background=1&title=0&byline=0"
+              ref="player"
+              id="player"
+              class="video"
+              :width="width"
+              :height="width"
+              frameborder="0"></iframe>
+    </div>
+    <div class="grid"
+         :style="{'margin-top': '8px'}">
       <img class="image"
            :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282751/heihei/donhot_4hour.gif'">
       <div></div>
@@ -61,7 +81,7 @@ export default {
     CopyRight,
   },
   data: () => ({
-    width: window.innerWidth,
+    width: window.innerWidth >= 500 ? 500 : window.innerWidth,
   }),
   mounted() {
     window.addEventListener('resize', this.windowResized)
@@ -69,7 +89,7 @@ export default {
   },
   methods: {
     windowResized() {
-      this.width = window.innerWidth
+      this.width = window.innerWidth <= 500 ? window.innerWidth : this.width
     },
     scaledImage(url) {
       return url.slice(0, 50) + 'c_scale/' + url.slice(50)
@@ -138,12 +158,35 @@ export default {
     }
   }
   .rect {
+    padding-top: 100%;
+    position: relative;
+    font-weight: normal;
+    line-height: 17px;
+    font-size: 12px;
+    .video {
+      position: absolute;
+      top: 0;
+      /* margin: 0; */
+      display: block;
+      z-index: -1;
+      /* height: 100%; */
+    }
+  }
+  .grid {
     display: grid;
     grid-template-columns: 1fr 8px 1fr;
     position: relative;
     font-weight: normal;
     line-height: 17px;
     font-size: 12px;
+    .video {
+      position: absolute;
+      top: 0;
+      /* margin: 0; */
+      display: block;
+      z-index: -1;
+      /* height: 100%; */
+    }
     .image {
     }
     &::before {

@@ -19,7 +19,7 @@
       </div>
     </div>
     <div class="rect">
-      <iframe src="https://player.vimeo.com/video/315177394?autoplay=1&loop=1&muted=1&autopause=0&background=1&title=0&byline=0"
+      <iframe src="https://player.vimeo.com/video/315235239?autoplay=1&loop=1&muted=1&autopause=0&background=1&title=0&byline=0"
               ref="player"
               id="player"
               class="video"
@@ -47,7 +47,7 @@ export default {
     CopyRight,
   },
   data: () => ({
-    width: window.innerWidth,
+    width: window.innerWidth >= 500 ? 500 : window.innerWidth,
   }),
   mounted() {
     window.addEventListener('resize', this.windowResized)
@@ -55,10 +55,10 @@ export default {
   },
   methods: {
     windowResized() {
-      this.width = window.innerWidth
+      this.width = window.innerWidth <= 500 ? window.innerWidth : this.width
     },
     scaledImage(url) {
-      return url.slice(0, 50) + 'c_scale,q_95,w_750/' + url.slice(50)
+      return url.slice(0, 50) + 'c_scale,w_750/' + url.slice(50)
     },
   },
   beforeDestroy() {

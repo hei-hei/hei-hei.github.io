@@ -5,13 +5,13 @@
            @click="$router.go(-1)"
            src="https://images.velog.io/post-images/chris/34975800-2788-11e9-a89e-513e433f9a41/arrowleft.svg">
       <div class="caption">contents</div>
-      <div class="title">illust</div>
+      <div class="title">etc</div>
       <div class="count">05</div>
     </div>
     <div class="rect"
          v-for="item in list"
          :key="item.number"
-         :style="{'background-color': item.color, color:item.number === '00' ? 'white' : 'black'}"
+         :style="{'background-color': item.color, color:item.number === '03' ? 'white' : 'black'}"
          @click="$router.push(`${$route.name}/${item.number}`)">
       <img class="background"
            :src="item.url">
@@ -35,48 +35,30 @@ export default {
       width: window.innerWidth,
       list: [
         {
-          name: '모나미',
-          type: 'brand character',
+          name: '검정치마체',
+          type: 'typo design',
           number: '01',
           color: '#E53786',
           url: this.scaledImage(
-            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287328/heihei/monami_card_thumbnail-1.jpg',
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290073/heihei/chima_card_thumbnail.jpg',
           ),
         },
         {
-          name: '그 후로도 오랫동안',
-          type: 'book illust',
+          name: '이상한 숲',
+          type: 'character design',
           number: '02',
           color: '#F4F4F4',
           url: this.scaledImage(
-            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290395/heihei/afterthan_card_thumbnail-1.jpg',
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290075/heihei/child_card_thumbnail.jpg',
           ),
         },
         {
-          name: '제주항공 캘린더',
-          type: 'calender illust',
+          name: 'C4D',
+          type: 'c4d doodle',
           number: '03',
-          color: '#181017',
+          color: '#202020',
           url: this.scaledImage(
-            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290386/heihei/jeju_air_card_thumbnail-1.jpg',
-          ),
-        },
-        {
-          name: 'Mafoo',
-          type: 'package illust',
-          number: '04',
-          color: '#D5D5D5',
-          url: this.scaledImage(
-            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290386/heihei/mafoo_card_thumbnail-1.jpg',
-          ),
-        },
-        {
-          name: '내 그림 찾기',
-          type: 'Caricature',
-          number: '05',
-          color: '#D5D5D5',
-          url: this.scaledImage(
-            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290111/heihei/face_card_thumbnail.jpg',
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290087/heihei/c4d_card_thumbnail.jpg',
           ),
         },
       ],

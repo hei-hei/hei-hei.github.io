@@ -22,45 +22,70 @@
     </div>
     <div class="section">
       <div class="rect"
-           v-for="sec in list"
-           :key="sec.title"
-           :style="{ 'background-color': sec.color}"
-           @click="$router.push(sec.title)">
-        <div class="title">{{ sec.title }}</div>
+           v-for="item in list"
+           :key="item.title"
+           :style="{ 'background-color': item.color}"
+           @click="$router.push(item.title)">
+        <img class="bg"
+             :src="item.url">
+        <div class="title">{{ item.title }}</div>
         <img class="arrow"
              src="https://images.velog.io/post-images/chris/a3b24650-2774-11e9-8a2a-c90b1e879aba/arrowright.svg">
       </div>
     </div>
+    <copy-right />
   </section>
 </template>
 
 <script>
+import CopyRight from '@/components/CopyRight.vue'
+
 export default {
-  data: () => ({
-    nameToggle: true,
-    list: [
-      {
-        title: 'motion',
-        color: '#FFD600',
-      },
-      {
-        title: 'illust',
-        color: '#009974',
-      },
-      {
-        title: 'graphic',
-        color: '#436EC1',
-      },
-      {
-        title: 'branding',
-        color: '#E5E5E5',
-      },
-      {
-        title: 'etc',
-        color: '#FFFFFF',
-      },
-    ],
-  }),
+  components: {
+    CopyRight,
+  },
+  data() {
+    return {
+      nameToggle: true,
+      list: [
+        {
+          title: 'motion',
+          color: '#FFD600',
+          url: this.scaledImage(
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549292142/heihei/line_1st_thumbnail.jpg',
+          ),
+        },
+        {
+          title: 'illust',
+          color: '#009974',
+          url: this.scaledImage(
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549292142/heihei/monami_1st_thumbnail.jpg',
+          ),
+        },
+        {
+          title: 'graphic',
+          color: '#436EC1',
+          url: this.scaledImage(
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549292695/heihei/somul_1st_thumbnail.jpg',
+          ),
+        },
+        {
+          title: 'branding',
+          color: '#E5E5E5',
+          url: this.scaledImage(
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549292142/heihei/jam_1st_thumbnail.jpg',
+          ),
+        },
+        {
+          title: 'etc',
+          color: '#FFFFFF',
+          url: this.scaledImage(
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549292142/heihei/chima_1st_thumbnail.jpg',
+          ),
+        },
+      ],
+    }
+  },
   mounted() {
     setInterval(() => {
       this.nameToggle = !this.nameToggle
@@ -68,6 +93,9 @@ export default {
   },
   methods: {
     instaClick: () => window.open('https://instagram.com/hei_hi_hei'),
+    scaledImage(url) {
+      return url && url.slice(0, 50) + 'c_scale,w_375/' + url.slice(50)
+    },
   },
   transition: {
     mode: 'out-in',
@@ -124,8 +152,8 @@ export default {
     margin-top: 74px;
     .rect {
       cursor: pointer;
-      height: 143px;
       position: relative;
+      padding-top: 38.133333333%;
       &:active {
       }
       &::before {
@@ -139,10 +167,17 @@ export default {
         background: radial-gradient(closest-side, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
         clip: rect(40px, 9999px, 68px, 0px);
       }
+      .bg {
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
       .title {
-        display: inline-block;
+        position: absolute;
+        top: 23px;
+        /* display: inline-block; */
         font-weight: bold;
-        padding-top: 23px;
+        /* padding-top: 23px; */
         margin-left: 33px;
         line-height: 20px;
         font-size: 14px;

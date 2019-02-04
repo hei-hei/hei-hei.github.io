@@ -11,7 +11,7 @@
     <div class="rect"
          v-for="item in list"
          :key="item.number"
-         :style="{'background-color': item.color, color:item.number === '03' ? 'white' : 'black'}"
+         :style="{'background-color': item.color, color: ['03','04'].indexOf(item.number) !== -1 ? 'white' : 'black'}"
          @click="$router.push(`${$route.name}/${item.number}`)">
       <img class="background"
            :src="item.url">
@@ -19,11 +19,17 @@
       <div class="type">{{ item.type }}</div>
       <div class="number">{{ item.number }}</div>
     </div>
+		<copy-right />
   </section>
 </template>
 
 <script>
+import CopyRight from '@/components/CopyRight.vue'
+
 export default {
+  components: {
+    CopyRight,
+  },
   data() {
     return {
       width: window.innerWidth,
@@ -53,24 +59,33 @@ export default {
           url: this.scaledImage(
             'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549222284/heihei/%E1%84%8D%E1%85%A1%E1%86%AB%E1%84%8D%E1%85%A1%E1%86%AF_card_thumbnail.jpg',
           ),
-				},
-				{
+        },
+        {
           name: '연애 하루 전',
           type: '8bit animation',
           number: '04',
           color: '#D5D5D5',
+          url: this.scaledImage(
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287300/heihei/aday_card_thumbnail-1.jpg',
+          ),
         },
         {
           name: 'JJO',
           type: 'C4D animation',
           number: '05',
-          color: '#D5D5D5',
+					color: '#D5D5D5',
+					url: this.scaledImage(
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287299/heihei/jjo_card_thumbnail-1.jpg',
+          ),
         },
         {
           name: 'My Room',
           type: 'C4D animation',
           number: '06',
-          color: '#D5D5D5',
+					color: '#D5D5D5',
+					url: this.scaledImage(
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287314/heihei/myroom_card_thumbnail-1.jpg',
+          ),
         },
       ],
     }
@@ -84,7 +99,7 @@ export default {
       this.width = window.innerWidth
     },
     scaledImage(url) {
-      return url && url.slice(0, 50) + 'c_scale,q_95,w_750/' + url.slice(50)
+      return url && url.slice(0, 50) + 'c_scale,w_750/' + url.slice(50)
     },
   },
   beforeDestroy() {
