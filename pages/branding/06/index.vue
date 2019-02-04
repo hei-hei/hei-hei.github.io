@@ -5,26 +5,19 @@
            @click="$router.go(-1)"
            src="https://images.velog.io/post-images/chris/34975800-2788-11e9-a89e-513e433f9a41/arrowleft.svg">
       <div class="caption">Tools</div>
-      <div class="title">귤잼</div>
+      <div class="title">DODE</div>
       <div class="tools">
         <img class="icon"
-             src="https://images.velog.io/post-images/chris/4503c4b0-27cb-11e9-a740-67ba1a06b5dd/aeicon.svg">
-        <img class="icon"
              src="https://images.velog.io/post-images/chris/ae55a190-286b-11e9-b507-dfed5458c07c/ailogo.svg">
-        <img class="icon"
-             src="https://images.velog.io/post-images/chris/4cc9f8e0-27cb-11e9-b8bc-4b35831033fa/psicon.svg">
         <img class="icon"
              src="https://images.velog.io/post-images/chris/09ddb580-27cb-11e9-a740-67ba1a06b5dd/ipadicon.svg">
       </div>
       <div class="desc">
-        에디터 귤잼의 캐릭터 브랜딩
+        design code study group
       </div>
     </div>
     <img class="image"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282232/heihei/jam_intro.gif'">
-    <img class="image"
-         :style="{'margin-top': '8px'}"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282235/heihei/jam_outro.gif'">
+         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549285243/heihei/dode_logo.jpg'">
     <div class="text">
       감정의 덩어리가 목에서 탁 하고 걸리다.<br>
       <br>
@@ -33,20 +26,6 @@
       물 위에 떠 있는 듯이,<br>
       편안하지만 불편한 느낌이다<br>
     </div>
-    <div class="rect">
-      <img class="image"
-           :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282230/heihei/jam_jack_jjal02.jpg')">
-      <img class="image"
-           :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282230/heihei/jam_baby_intro.jpg')">
-      <img class="image"
-           :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282230/heihei/jam_jack_jjal01.jpg')">
-    </div>
-    <img class="image"
-         :style="{'margin-top': '8px'}"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282231/heihei/jam_profileBGBG.jpg'">
-         <img class="image"
-         :style="{'margin-top': '8px'}"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282230/heihei/jam_baby_all2.jpg'">
     <copy-right />
   </section>
 </template>
@@ -137,7 +116,7 @@ export default {
   }
   .rect {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 8px 1fr;
     position: relative;
     font-weight: normal;
     line-height: 17px;

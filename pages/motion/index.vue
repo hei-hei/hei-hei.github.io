@@ -53,19 +53,31 @@ export default {
           url: this.scaledImage(
             'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549222284/heihei/%E1%84%8D%E1%85%A1%E1%86%AB%E1%84%8D%E1%85%A1%E1%86%AF_card_thumbnail.jpg',
           ),
+				},
+				{
+          name: '연애 하루 전',
+          type: '8bit animation',
+          number: '04',
+          color: '#D5D5D5',
         },
         {
-          name: '피키 엔터',
-          type: 'outro motion',
-          number: '04',
+          name: 'JJO',
+          type: 'C4D animation',
+          number: '05',
+          color: '#D5D5D5',
+        },
+        {
+          name: 'My Room',
+          type: 'C4D animation',
+          number: '06',
           color: '#D5D5D5',
         },
       ],
     }
   },
   mounted() {
-		window.addEventListener('resize', this.windowResized)
-		window.scrollTo(0, 0)
+    window.addEventListener('resize', this.windowResized)
+    window.scrollTo(0, 0)
   },
   methods: {
     windowResized() {

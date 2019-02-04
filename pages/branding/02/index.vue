@@ -5,7 +5,7 @@
            @click="$router.go(-1)"
            src="https://images.velog.io/post-images/chris/34975800-2788-11e9-a89e-513e433f9a41/arrowleft.svg">
       <div class="caption">Tools</div>
-      <div class="title">귤잼</div>
+      <div class="title">소핫</div>
       <div class="tools">
         <img class="icon"
              src="https://images.velog.io/post-images/chris/4503c4b0-27cb-11e9-a740-67ba1a06b5dd/aeicon.svg">
@@ -17,14 +17,14 @@
              src="https://images.velog.io/post-images/chris/09ddb580-27cb-11e9-a740-67ba1a06b5dd/ipadicon.svg">
       </div>
       <div class="desc">
-        에디터 귤잼의 캐릭터 브랜딩
+        에디터 소핫의 리브랜딩
       </div>
     </div>
     <img class="image"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282232/heihei/jam_intro.gif'">
+         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282773/heihei/sohot_start.gif'">
     <img class="image"
          :style="{'margin-top': '8px'}"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282235/heihei/jam_outro.gif'">
+         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282769/heihei/sohot_end.gif'">
     <div class="text">
       감정의 덩어리가 목에서 탁 하고 걸리다.<br>
       <br>
@@ -33,20 +33,22 @@
       물 위에 떠 있는 듯이,<br>
       편안하지만 불편한 느낌이다<br>
     </div>
-    <div class="rect">
+    <img class="image"
+         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282765/heihei/%E1%84%89%E1%85%A9%E1%84%92%E1%85%A1%E1%86%BA_%E1%84%90%E1%85%A6%E1%86%B7%E1%84%91%E1%85%B3%E1%86%AF%E1%84%85%E1%85%B5%E1%86%BA_%E1%84%86%E1%85%A9%E1%84%8B%E1%85%B3%E1%86%B7%E1%84%8C%E1%85%B5%E1%86%B8.jpg'">
+    <div class="rect"
+         :style="{'margin-top': '8px'}">
       <img class="image"
-           :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282230/heihei/jam_jack_jjal02.jpg')">
+           :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282751/heihei/donhot_4hour.gif'">
+      <div></div>
       <img class="image"
-           :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282230/heihei/jam_baby_intro.jpg')">
-      <img class="image"
-           :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282230/heihei/jam_jack_jjal01.jpg')">
+           :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282775/heihei/donhot_cover.gif'">
     </div>
     <img class="image"
          :style="{'margin-top': '8px'}"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282231/heihei/jam_profileBGBG.jpg'">
-         <img class="image"
+         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282754/heihei/donhot_yeah.gif'">
+    <img class="image"
          :style="{'margin-top': '8px'}"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282230/heihei/jam_baby_all2.jpg'">
+         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282758/heihei/%E1%84%89%E1%85%A9%E1%84%92%E1%85%A1%E1%86%BA_%E1%84%91%E1%85%B3%E1%84%87%E1%85%A2.jpg'">
     <copy-right />
   </section>
 </template>
@@ -137,7 +139,7 @@ export default {
   }
   .rect {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 8px 1fr;
     position: relative;
     font-weight: normal;
     line-height: 17px;
