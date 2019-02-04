@@ -10,7 +10,7 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "predeploy": "nuxt generate",
-    "deploy": "gh-pages -d dist -b master",
+    "deploy": "gh-pages -d dist -b master --dotfiles true",
     "precommit": "npm run lint"
   },
   "dependencies": {

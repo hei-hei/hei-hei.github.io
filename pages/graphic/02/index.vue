@@ -5,7 +5,7 @@
            @click="$router.go(-1)"
            src="https://images.velog.io/post-images/chris/34975800-2788-11e9-a89e-513e433f9a41/arrowleft.svg">
       <div class="caption">Tools</div>
-      <div class="title">모나미 - 청춘</div>
+      <div class="title">찍히면 죽는다</div>
       <div class="tools">
         <img class="icon"
              src="https://images.velog.io/post-images/chris/ae55a190-286b-11e9-b507-dfed5458c07c/ailogo.svg">
@@ -15,25 +15,35 @@
              src="https://images.velog.io/post-images/chris/09ddb580-27cb-11e9-a740-67ba1a06b5dd/ipadicon.svg">
       </div>
       <div class="desc">
-        모나미 캐릭터 디자인
+        연애 플레이 리스트의 예능
       </div>
     </div>
     <img class="image"
-         :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549279752/heihei/%EB%B8%94%EB%9E%99%EB%9F%B0%EC%BA%90%EB%A6%AD%ED%84%B0_%EC%A2%85%ED%95%A9_1.jpg')">
+         :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549281011/heihei/title_001.jpg')">
+    <img class="image"
+         :style="{'margin-top': '8px'}"
+         :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549281011/heihei/title_002.jpg')">
+    <div class="rect"
+         :style="{'margin-top': '8px'}">
+      <img class="image"
+           :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549281011/heihei/0001.jpg')">
+      <img class="image"
+           :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549281011/heihei/0002.jpg')">
+    </div>
     <div class="text">
-      모나미의 cvs전략으로, 20대 층을 타겟으로 삼아 black run이라는 청춘마라톤을 기획했습니다. 그 기획에서 다양한 사람들이 다양한 생각을 가지고 달리자는 컨셉을 중심으로 진행했고, 다양한 사람들을 모나미의 대표 문구들을 이용해서 표현하거나, 긍정적인 모습을 보여주는 캐릭터들을 디자인하여 행사 전반의 분위기를 가깝고 쉽게 접할 수 있음을 보여주려 했습니다.
+      감정의 덩어리가 목에서 탁 하고 걸리다.<br>
+      갑작스럽게 걸려버린 감정 덩어리를<br>
+      가만히 바라보다가 기분이 이상해진다.<br>
+      물 위에 떠 있는 듯이,
     </div>
     <img class="image"
-         :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549262291/heihei/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2019-02-04_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_1.54.28_%E1%84%89%E1%85%A1%E1%84%87%E1%85%A9%E1%86%AB.jpg')">
-    <img class="image"
-         :style="{'margin-top': '8px'}"
-         :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549262280/heihei/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2019-02-04_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_1.54.30_%E1%84%89%E1%85%A1%E1%84%87%E1%85%A9%E1%86%AB.jpg')">
-    <img class="image"
-         :style="{'margin-top': '8px'}"
-         :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549262280/heihei/%E1%84%87%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A2%E1%86%A8%E1%84%85%E1%85%A5%E1%86%AB_%E1%84%86%E1%85%A9%E1%86%A8%E1%84%8B%E1%85%A5%E1%86%B8_%E1%84%91%E1%85%A9%E1%84%89%E1%85%B3%E1%84%90%E1%85%A5.jpg')">
-         <img class="image"
-         :style="{'margin-top': '8px'}"
-         :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549262279/heihei/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2019-02-04_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_1.54.41_%E1%84%89%E1%85%A1%E1%84%87%E1%85%A9%E1%86%AB.jpg')">
+         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/c_scale,w_960/v1549281009/heihei/%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC_%E1%84%8D%E1%85%B5%E1%86%A8%E1%84%92%E1%85%B5%E1%84%86%E1%85%A7%E1%86%AB%E1%84%8C%E1%85%AE%E1%86%A8%E1%84%82%E1%85%B3%E1%86%AB%E1%84%83%E1%85%A1_%E1%84%91%E1%85%A9%E1%84%89%E1%85%B3%E1%84%90%E1%85%A5.jpg'">
+    <div class="text">
+      감정의 덩어리가 목에서 탁 하고 걸리다.<br>
+      갑작스럽게 걸려버린 감정 덩어리를<br>
+      가만히 바라보다가 기분이 이상해진다.<br>
+      물 위에 떠 있는 듯이,
+    </div>
     <copy-right />
   </section>
 </template>
@@ -57,7 +67,7 @@ export default {
       this.width = window.innerWidth
     },
     scaledImage(url) {
-      return url.slice(0, 50) + 'c_scale,q_100/' + url.slice(50)
+      return url.slice(0, 50) + 'c_scale/' + url.slice(50)
     },
   },
   beforeDestroy() {
@@ -123,20 +133,14 @@ export default {
     }
   }
   .rect {
-    padding-top: 177.777777778%;
     position: relative;
     font-weight: normal;
     line-height: 17px;
     font-size: 12px;
-    .video {
-      position: absolute;
-      top: 0;
-      /* height: 100%; */
-    }
+    display: grid;
+    grid-template-columns: 61.5% 38.5%;
+    flex-direction: column;
     .image {
-      width: 100%;
-      position: absolute;
-      top: 0;
     }
     &::before {
       z-index: 999;

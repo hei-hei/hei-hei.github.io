@@ -74,7 +74,7 @@ export default {
       this.width = window.innerWidth
     },
     scaledImage(url) {
-      return url.slice(0, 50) + 'c_scale,q_95,w_375/' + url.slice(50)
+      return url.slice(0, 50) + 'c_scale,q_100,w_512/' + url.slice(50)
     },
   },
   beforeDestroy() {

@@ -30,13 +30,13 @@ body,
 #__nuxt,
 #__layout {
   margin: 0;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }
 html {
   position: absolute;
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
   min-width: 300px;
   margin: auto;
   left: 0;
