@@ -1,23 +1,30 @@
 {
   "name": "hei-hei.github.io",
   "version": "1.0.0",
-  "description": "hei-hei.github.io",
-  "main": "index.js",
+  "description": "My cool Nuxt.js project",
+  "author": "Chris Yang",
+  "private": true,
   "scripts": {
-    "dev": "parcel ./index.html"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "predeploy": "nuxt generate",
+    "deploy": "cp CNAME ./dist/CNAME && gh-pages -d dist -b master",
+    "precommit": "npm run lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hei-hei/hei-hei.github.io.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hei-hei/hei-hei.github.io/issues"
-  },
-  "homepage": "https://github.com/hei-hei/hei-hei.github.io#readme",
   "dependencies": {
-    "parcel-bundler": "^1.10.3"
+    "gh-pages": "^2.0.1",
+    "node-sass": "^4.11.0",
+    "nuxt": "^2.4.2",
+    "sass-loader": "^7.1.0",
+    "terser": "^3.14.1"
+  },
+  "devDependencies": {
+    "cross-env": "^5.0.1",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.13.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-vue": "^5.1.0"
   }
 }
