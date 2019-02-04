@@ -68,7 +68,7 @@ export default {
   },
   mounted() {
     window.addEventListener('resize', this.windowResized)
-    console.log(this)
+    window.scrollTo(0, 0)
   },
   methods: {
     windowResized() {

@@ -85,10 +85,11 @@ export default {
     CopyRight,
   },
   data: () => ({
-    width: window.innerWidth,
+    width: window.innerWidth >= 600 ? 600 : window.innerWidth,
   }),
   mounted() {
     window.addEventListener('resize', this.windowResized)
+    window.scrollTo(0, 0)
   },
   methods: {
     windowResized() {
@@ -170,6 +171,8 @@ export default {
       position: absolute;
       top: 0;
       /* height: 100%; */
+      /* touch-action: pan-y !important; */
+      z-index: -1;
     }
     .image {
       width: 100%;

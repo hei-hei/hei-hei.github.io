@@ -47,6 +47,7 @@ export default {
   }),
   mounted() {
     window.addEventListener('resize', this.windowResized)
+    window.scrollTo(0, 0)
   },
   methods: {
     windowResized() {

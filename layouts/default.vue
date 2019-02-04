@@ -29,24 +29,23 @@ html,
 body,
 #__nuxt,
 #__layout {
-  height: 100%;
   margin: 0;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+  -webkit-overflow-scrolling: touch;
 }
-
-#__nuxt {
-  position: relative;
-  height: 100%;
-  justify-content: center;
-}
-#__layout {
+html {
   position: absolute;
-  top: 0;
+  width: 100%;
+  max-width: 600px;
+  min-width: 300px;
   margin: auto;
   left: 0;
   right: 0;
-  max-width: 600px;
-  min-width: 300px;
+}
+
+#__nuxt {
+}
+#__layout {
 }
 ::-webkit-scrollbar {
   width: 0px; /* remove scrollbar space */
