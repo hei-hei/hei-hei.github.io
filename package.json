@@ -10,7 +10,7 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "predeploy": "nuxt generate",
-    "deploy": "cp CNAME ./dist/CNAME && gh-pages -d dist -b master",
+    "deploy": "cp CNAME ./dist/CNAME && gh-pages -d dist/ -b master",
     "precommit": "npm run lint"
   },
   "dependencies": {
