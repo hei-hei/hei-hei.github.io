@@ -2,7 +2,7 @@
   <section class="container">
     <div class="top">
       <img class="arrow__back"
-           @click="$router.go(-1)"
+           @click="$router.push(`/${$route.path.split('/')[1]}`)"
            src="https://images.velog.io/post-images/chris/34975800-2788-11e9-a89e-513e433f9a41/arrowleft.svg">
       <div class="caption">Tools</div>
       <div class="title">소핫</div>
@@ -35,26 +35,44 @@
     </div>
     <img class="image"
          :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282765/heihei/%E1%84%89%E1%85%A9%E1%84%92%E1%85%A1%E1%86%BA_%E1%84%90%E1%85%A6%E1%86%B7%E1%84%91%E1%85%B3%E1%86%AF%E1%84%85%E1%85%B5%E1%86%BA_%E1%84%86%E1%85%A9%E1%84%8B%E1%85%B3%E1%86%B7%E1%84%8C%E1%85%B5%E1%86%B8.jpg'">
-    <div class="rect"
-         :style="{'margin-top': '8px'}">
-      <iframe src="https://player.vimeo.com/video/315238701?autoplay=1&loop=1&muted=1&autopause=0&background=1&title=0&byline=0"
+    <!-- <div class="rect" -->
+    <!-- :style="{'margin-top': '8px'}"> -->
+    <!-- <iframe src="https://player.vimeo.com/video/315238701?autoplay=1&loop=1&muted=1&autopause=0&title=0&byline=0"
               ref="player"
               id="player"
               class="video"
               :width="width"
               :height="width"
-              frameborder="0"></iframe>
-    </div>
-    <div class="rect"
-         :style="{'margin-top': '8px'}">
-      <iframe src="https://player.vimeo.com/video/315238678?autoplay=1&loop=1&muted=1&autopause=0&background=1&title=0&byline=0"
+              frameborder="0"></iframe> -->
+    <!-- </div>
+    <div class="rect" -->
+    <!-- :style="{'margin-top': '8px'}"> -->
+    <!-- <iframe src="https://player.vimeo.com/video/315238678?autoplay=1&loop=1&muted=1&autopause=0&title=0&byline=0"
               ref="player"
               id="player"
               class="video"
               :width="width"
               :height="width"
-              frameborder="0"></iframe>
-    </div>
+              frameborder="0"></iframe> -->
+    <vimeo-player ref="player"
+                  class="video"
+                  :style="{'margin-top': '8px'}"
+                  :video-id="315238701"
+                  :player-width="width"
+                  :player-height="width"
+                  :loop="true"
+                  :autoplay="true"
+                  :options="{ autopause: false }" />
+    <vimeo-player ref="player"
+                  class="video"
+                  :style="{'margin-top': '8px'}"
+                  :video-id="315238678"
+                  :player-width="width"
+                  :player-height="width"
+                  :loop="true"
+                  :autoplay="true"
+                  :options="{ autopause: false }" />
+    <!-- </div> -->
     <div class="grid"
          :style="{'margin-top': '8px'}">
       <img class="image"

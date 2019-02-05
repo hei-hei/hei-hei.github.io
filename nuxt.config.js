@@ -38,7 +38,9 @@ module.exports = {
   // plugins: [{ src: `~plugins/plugins`, ssr: false }],
 
   modules: [],
+  plugins: [{ src: `~plugins/plugins.js`, ssr: false }],
   build: {
+    vendor: ['vue-vimeo-player'],
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {

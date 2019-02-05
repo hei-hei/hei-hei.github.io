@@ -2,7 +2,7 @@
   <section class="container">
     <div class="top">
       <img class="arrow__back"
-           @click="$router.go(-1)"
+           @click="$router.push('/')"
            src="https://images.velog.io/post-images/chris/34975800-2788-11e9-a89e-513e433f9a41/arrowleft.svg">
       <div class="caption">contents</div>
       <div class="title">branding</div>
@@ -12,7 +12,7 @@
          v-for="item in list"
          :key="item.number"
          :style="{'background-color': item.color, color:['04','05'].indexOf(item.number) !== -1 ? 'white' : 'black'}"
-         @click="$router.push(`${$route.name}/${item.number}`)">
+         @click="$router.push(`/${$route.path.split('/')[1]}/${item.number}`)">
       <img class="background"
            :src="item.url">
       <div class="name">{{ item.name }}</div>

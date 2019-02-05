@@ -94,7 +94,7 @@ export default {
   methods: {
     instaClick: () => window.open('https://instagram.com/hei_hi_hei'),
     scaledImage(url) {
-      return url && url.slice(0, 50) + 'c_scale,w_375/' + url.slice(50)
+      return url && url.slice(0, 50) + 'c_scale,w_750/' + url.slice(50)
     },
   },
   transition: {

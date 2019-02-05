@@ -2,7 +2,7 @@
   <section class="container">
     <div class="top">
       <img class="arrow__back"
-           @click="$router.go(-1)"
+           @click="$router.push(`/${$route.path.split('/')[1]}`)"
            src="https://images.velog.io/post-images/chris/34975800-2788-11e9-a89e-513e433f9a41/arrowleft.svg">
       <div class="caption">Tools</div>
       <div class="title">피키 엔터</div>
@@ -16,15 +16,22 @@
         엔터테이먼트 에디터, 피키엔터의 로고 디자인
       </div>
     </div>
-    <div class="rect">
-      <iframe src="https://player.vimeo.com/video/315238389?autoplay=1&loop=1&muted=1&autopause=0&background=1&title=0&byline=0"
+    <!-- <div class="rect"> -->
+    <!-- <iframe src="https://player.vimeo.com/video/315238389?autoplay=1&loop=1&muted=1&autopause=0&title=0&byline=0"
               ref="player"
               id="player"
               class="video"
               :width="width"
               :height="width"
-              frameborder="0"></iframe>
-    </div>
+              frameborder="0"></iframe> -->
+    <vimeo-player ref="player"
+                  class="video"
+                  :video-id="315238389"
+                  :player-width="width"
+                  :player-height="width"
+                  :loop="true"
+                  :autoplay="true" />
+    <!-- </div> -->
     <div class="text">
       감정의 덩어리가 목에서 탁 하고 걸리다.<br>
       <br>
@@ -140,8 +147,8 @@ export default {
       display: block;
       z-index: -1;
       /* height: 100%; */
-    }ㄴ
-    .image {
+    }
+    ㄴ .image {
     }
     &::before {
       z-index: 999;

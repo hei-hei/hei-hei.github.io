@@ -2,7 +2,7 @@
   <section class="container">
     <div class="top">
       <img class="arrow__back"
-           @click="$router.go(-1)"
+           @click="$router.push(`/${$route.path.split('/')[1]}`)"
            src="https://images.velog.io/post-images/chris/34975800-2788-11e9-a89e-513e433f9a41/arrowleft.svg">
       <div class="caption">Tools</div>
       <div class="title">모나미 - 청춘</div>

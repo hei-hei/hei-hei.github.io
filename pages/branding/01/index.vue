@@ -2,7 +2,7 @@
   <section class="container">
     <div class="top">
       <img class="arrow__back"
-           @click="$router.go(-1)"
+           @click="$router.push(`/${$route.path.split('/')[1]}`)"
            src="https://images.velog.io/post-images/chris/34975800-2788-11e9-a89e-513e433f9a41/arrowleft.svg">
       <div class="caption">Tools</div>
       <div class="title">귤잼</div>
@@ -44,7 +44,7 @@
     <img class="image"
          :style="{'margin-top': '8px'}"
          :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282231/heihei/jam_profileBGBG.jpg'">
-         <img class="image"
+    <img class="image"
          :style="{'margin-top': '8px'}"
          :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282230/heihei/jam_baby_all2.jpg'">
     <copy-right />
@@ -64,6 +64,7 @@ export default {
   mounted() {
     window.addEventListener('resize', this.windowResized)
     window.scrollTo(0, 0)
+    console.log(this.$route)
   },
   methods: {
     windowResized() {

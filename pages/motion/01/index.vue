@@ -2,7 +2,7 @@
   <section class="container">
     <div class="top">
       <img class="arrow__back"
-           @click="$router.go(-1)"
+           @click="$router.push(`/${$route.path.split('/')[1]}`)"
            src="https://images.velog.io/post-images/chris/34975800-2788-11e9-a89e-513e433f9a41/arrowleft.svg">
       <div class="caption">Tools</div>
       <div class="title">선</div>
@@ -18,15 +18,35 @@
         선에서 선으로 향하다
       </div>
     </div>
-    <div class="rect">
-      <iframe src="https://player.vimeo.com/video/315234345?autoplay=1&loop=1&muted=1&autopause=0&background=1&title=0&byline=0"
-              ref="player"
-              id="player"
-              class="video"
-              :width="width"
-              :height="width*16/9"
-              frameborder="0"></iframe>
-    </div>
+    <!-- <div class="rect"> -->
+    <!-- <iframe src="https://player.vimeo.com/video/315234345?autoplay=1&loop=1&muted=1&autopause=0&title=0&byline=0"
+            ref="player"
+            id="player"
+            class="video"
+            :width="width"
+            :height="width*16/9"
+            frameborder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen></iframe> -->
+    <!-- <iframe src="https://player.vimeo.com/video/315234345"
+            ref="player"
+            id="player"
+            class="video"
+            :width="width"
+            :height="width*16/9"
+            frameborder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen></iframe> -->
+    <vimeo-player ref="player"
+                  class="video"
+                  :video-id="315234345"
+                  :player-width="width"
+                  :player-height="width*16/9"
+                  :loop="true"
+                  :autoplay="true" />
+    <!-- </div> -->
     <div class="text">
       감정의 덩어리가 목에서 탁 하고 걸리다.<br><br>
 
@@ -152,6 +172,10 @@ export default {
       color: rgba(0, 0, 0, 0.38);
     }
   }
+  .video {
+    display: block;
+    width: 100%;
+  }
   .rect {
     padding-top: 177.777777778%;
     position: relative;
@@ -161,19 +185,32 @@ export default {
     .video {
       position: absolute;
       top: 0;
-      display: block;
-      width: 100%;
+      /* left: 0; */
+      /* right: 0; */
+      /* bottom: 0; */
+      /* display: block; */
+      /* width: 100%; */
       /* height: 100%; */
       /* touch-action: pan-y !important; */
       z-index: -1;
     }
+    /* .shade {
+      opacity: 0;
+      position: absolute;
+      background-color: black;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+    } */
     .image {
       width: 100%;
       position: absolute;
       top: 0;
     }
     &::before {
-      z-index: 999;
+      z-index: 1;
       content: '';
       display: block;
       position: absolute;
@@ -182,7 +219,7 @@ export default {
       left: -25px;
       top: -40px;
       background: radial-gradient(closest-side, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
-      clip: rect(40px, 9999px, 68px, 0px);
+      clip: rect(40px, 2000px, 68px, 0px);
     }
   }
   .text {
@@ -199,4 +236,3 @@ export default {
   }
 }
 </style>
-¬

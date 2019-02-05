@@ -2,7 +2,7 @@
   <section class="container">
     <div class="top">
       <img class="arrow__back"
-           @click="$router.go(-1)"
+           @click="$router.push(`/${$route.path.split('/')[1]}`)"
            src="https://images.velog.io/post-images/chris/34975800-2788-11e9-a89e-513e433f9a41/arrowleft.svg">
       <div class="caption">Tools</div>
       <div class="title">연애 하루 전 8bit</div>
@@ -18,24 +18,38 @@
         Lico애니메이션의 특별영상
       </div>
     </div>
-    <div class="rect">
-      <iframe src="https://player.vimeo.com/video/315234880?autoplay=1&loop=1&muted=1&autopause=0&background=1&title=0&byline=0"
-              ref="player"
-              id="player"
-              class="video"
-              :width="width"
-              :height="width*9/16"
-              frameborder="0"></iframe></div>
-    <div class="rect">
-      <iframe src="https://player.vimeo.com/video/315234640?autoplay=1&loop=1&muted=1&autopause=0&background=1&title=0&byline=0"
-              ref="player"
-              id="player"
-              class="video"
-              :style="{'margin-top': '8px'}"
-              :width="width"
-              :height="width*9/16"
-              frameborder="0"></iframe>
-    </div>
+    <!-- <iframe src="https://player.vimeo.com/video/315234880?autoplay=1&loop=1&muted=1&autopause=0&title=0&byline=0"
+            ref="player"
+            id="player"
+            class="video"
+            :width="width"
+            :height="width*9/16"
+            frameborder="0"></iframe>
+    <iframe src="https://player.vimeo.com/video/315234640?autoplay=1&loop=1&muted=1&autopause=0&title=0&byline=0"
+            ref="player"
+            id="player"
+            class="video"
+            :style="{'margin-top': '8px'}"
+            :width="width"
+            :height="width*9/16"
+            frameborder="0"></iframe> -->
+    <vimeo-player ref="player"
+                  class="video"
+                  :video-id="315234880"
+                  :player-width="width"
+                  :player-height="width*9/16"
+                  :loop="true"
+                  :autoplay="true"
+                  :options="{ autopause: false }" />
+    <vimeo-player ref="player"
+                  class="video"
+                  :style="{'margin-top': '8px'}"
+                  :video-id="315234640"
+                  :player-width="width"
+                  :player-height="width*9/16"
+                  :loop="true"
+                  :autoplay="true"
+                  :options="{ autopause: false }" />
     <div class="text">
       피키캐스트에서 할로윈 시기에 맞추어 앱 시작할 때, 나타나는<br>
       이미지 피키캐스트의 캐릭터들을 활용하여 제작했습니다.<br>
@@ -150,6 +164,7 @@ export default {
       color: rgba(0, 0, 0, 0.38);
     }
   }
+
   .rect {
     padding-top: 56.25%;
     position: relative;
@@ -159,10 +174,14 @@ export default {
     .video {
       position: absolute;
       top: 0;
-      /* margin: 0; */
-      display: block;
-      z-index: -1;
+      /* left: 0; */
+      /* right: 0; */
+      /* bottom: 0; */
+      /* display: block; */
+      /* width: 100%; */
       /* height: 100%; */
+      /* touch-action: pan-y !important; */
+      z-index: -1;
     }
     .image {
       width: 100%;

@@ -2,7 +2,7 @@
   <section class="container">
     <div class="top">
       <img class="arrow__back"
-           @click="$router.go(-1)"
+           @click="$router.push(`/${$route.path.split('/')[1]}`)"
            src="https://images.velog.io/post-images/chris/34975800-2788-11e9-a89e-513e433f9a41/arrowleft.svg">
       <div class="caption">Tools</div>
       <div class="title">아카이브</div>
@@ -19,10 +19,10 @@
       </div>
     </div>
     <img class="image"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549283169/heihei/%E1%84%8B%E1%85%A1%E1%84%8F%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B32_%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%AE%E1%84%90%E1%85%B3%E1%84%85%E1%85%A92_%E1%84%89%E1%85%AE%E1%84%8C%E1%85%A5%E1%86%BC.gif'">
+         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549283175/heihei/%E1%84%8B%E1%85%A1%E1%84%8F%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B32_%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%90%E1%85%B3%E1%84%85%E1%85%A92_%E1%84%89%E1%85%AE%E1%84%8C%E1%85%A5%E1%86%BC.gif'">
     <img class="image"
          :style="{'margin-top': '8px'}"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549283175/heihei/%E1%84%8B%E1%85%A1%E1%84%8F%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B32_%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%90%E1%85%B3%E1%84%85%E1%85%A92_%E1%84%89%E1%85%AE%E1%84%8C%E1%85%A5%E1%86%BC.gif'">
+         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549283169/heihei/%E1%84%8B%E1%85%A1%E1%84%8F%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B32_%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%AE%E1%84%90%E1%85%B3%E1%84%85%E1%85%A92_%E1%84%89%E1%85%AE%E1%84%8C%E1%85%A5%E1%86%BC.gif'">
     <div class="text">
       감정의 덩어리가 목에서 탁 하고 걸리다.<br>
       <br>

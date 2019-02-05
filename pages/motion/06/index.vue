@@ -2,7 +2,7 @@
   <section class="container">
     <div class="top">
       <img class="arrow__back"
-           @click="$router.go(-1)"
+           @click="$router.push(`/${$route.path.split('/')[1]}`)"
            src="https://images.velog.io/post-images/chris/34975800-2788-11e9-a89e-513e433f9a41/arrowleft.svg">
       <div class="caption">Tools</div>
       <div class="title">My Room</div>
@@ -18,14 +18,22 @@
         개인적인 공간에 대하여
       </div>
     </div>
-    <div class="rect">
-      <iframe src="https://player.vimeo.com/video/315235239?autoplay=1&loop=1&muted=1&autopause=0&background=1&title=0&byline=0"
+    <!-- <div class="rect"> -->
+    <!-- <iframe src="https://player.vimeo.com/video/315235239?autoplay=1&loop=1&muted=1&autopause=0&title=0&byline=0"
               ref="player"
               id="player"
               class="video"
               :width="width"
               :height="width*9/16"
-              frameborder="0"></iframe></div>
+              frameborder="0"></iframe> -->
+    <!-- </div> -->
+    <vimeo-player ref="player"
+                  class="video"
+                  :video-id="315235239"
+                  :player-width="width"
+                  :player-height="width*9/16"
+                  :loop="true"
+                  :autoplay="true" />
     <div class="text">
       피키캐스트에서 할로윈 시기에 맞추어 앱 시작할 때, 나타나는<br>
       이미지 피키캐스트의 캐릭터들을 활용하여 제작했습니다.<br>

@@ -2,7 +2,7 @@
   <section class="container">
     <div class="top">
       <img class="arrow__back"
-           @click="$router.go(-1)"
+           @click="$router.push(`/${$route.path.split('/')[1]}`)"
            src="https://images.velog.io/post-images/chris/34975800-2788-11e9-a89e-513e433f9a41/arrowleft.svg">
       <div class="caption">Tools</div>
       <div class="title">C4D</div>
@@ -16,7 +16,7 @@
         3d 작업물 모음
       </div>
     </div>
-    <div class="rect">
+    <!-- <div class="rect">
       <iframe src="https://player.vimeo.com/video/315234295?autoplay=1&loop=1&muted=1&autopause=0&background=1&title=0&byline=0"
               ref="player"
               id="player"
@@ -24,7 +24,15 @@
               :width="width"
               :height="width*9/16"
               frameborder="0"></iframe>
-    </div>
+    </div> -->
+    <vimeo-player ref="player"
+                  class="video"
+                  :video-id="315234295"
+                  :player-width="width"
+                  :player-height="width*9/16"
+                  :loop="true"
+                  :autoplay="true"
+                  :options="{ autopause: false }" />
     <img class="image"
          :style="{'margin-top': '8px'}"
          :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287791/heihei/%E1%84%86%E1%85%A9%E1%84%89%E1%85%A7%E1%86%AB_01_%E1%84%87%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%BC.jpg'">
@@ -39,15 +47,23 @@
       다양한 질감표현을 연습하기 위해 한 가지 오브젝트에 다양한
       효과와 라이트를 넣은 이미지입니다.
     </div>
-    <div class="rect">
-      <iframe src="https://player.vimeo.com/video/315234321?autoplay=1&loop=1&muted=1&autopause=0&background=1&title=0&byline=0"
-              ref="player"
-              id="player"
-              class="video"
-              :width="width"
-              :height="width*9/16"
-              frameborder="0"></iframe>
-    </div>
+    <!-- <div class="rect"> -->
+    <!-- <iframe src="https://player.vimeo.com/video/315234321?autoplay=1&loop=1&muted=1&autopause=0&title=0&byline=0"
+            ref="player"
+            id="player"
+            class="video"
+            :width="width"
+            :height="width*9/16"
+            frameborder="0"></iframe> -->
+    <vimeo-player ref="player"
+                  class="video"
+                  :video-id="315234321"
+                  :player-width="width"
+                  :player-height="width*9/16"
+                  :loop="true"
+                  :autoplay="true"
+                  :options="{ autopause: false }" />
+    <!-- </div> -->
     <div class="text">
       캐릭터의 걸음걸이와 Rigging에 대해 공부하기 위해서 만든
       걸어가는 레몬입니다.

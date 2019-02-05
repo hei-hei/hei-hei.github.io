@@ -2,30 +2,38 @@
   <section class="container">
     <div class="top">
       <img class="arrow__back"
-           @click="$router.go(-1)"
+           @click="$router.push(`/${$route.path.split('/')[1]}`)"
            src="https://images.velog.io/post-images/chris/34975800-2788-11e9-a89e-513e433f9a41/arrowleft.svg">
       <div class="caption">Tools</div>
-      <div class="title">연애 하루 전 8bit</div>
+      <div class="title">JJO</div>
       <div class="tools">
         <img class="icon"
              src="https://images.velog.io/post-images/chris/4503c4b0-27cb-11e9-a740-67ba1a06b5dd/aeicon.svg">
         <img class="icon"
              src="https://images.velog.io/post-images/chris/09ddb580-27cb-11e9-a740-67ba1a06b5dd/ipadicon.svg">
-             <img class="icon"
+        <img class="icon"
              src="https://images.velog.io/post-images/chris/3e5d4b90-287f-11e9-aaec-41893bf0d684/c4dicon.svg">
       </div>
       <div class="desc">
-        Lico애니메이션의 특별영상
+        JJO의 단편 애니메이션 트레일러
       </div>
     </div>
-    <div class="rect">
-      <iframe src="https://player.vimeo.com/video/315235195?autoplay=1&loop=1&muted=1&autopause=0&background=1&title=0&byline=0"
-              ref="player"
-              id="player"
-              class="video"
-              :width="width"
-              :height="width*9/16"
-              frameborder="0"></iframe></div>
+    <!-- <div class="rect"> -->
+    <!-- <iframe src="https://player.vimeo.com/video/315235195?autoplay=1&loop=1&muted=1&autopause=0&title=0&byline=0"
+            ref="player"
+            id="player"
+            class="video"
+            :width="width"
+            :height="width*9/16"
+            frameborder="0"></iframe> -->
+    <vimeo-player ref="player"
+                  class="video"
+                  :video-id="315235195"
+                  :player-width="width"
+                  :player-height="width*9/16"
+                  :loop="true"
+                  :autoplay="true" />
+    <!-- </div> -->
     <div class="text">
       피키캐스트에서 할로윈 시기에 맞추어 앱 시작할 때, 나타나는<br>
       이미지 피키캐스트의 캐릭터들을 활용하여 제작했습니다.<br>
