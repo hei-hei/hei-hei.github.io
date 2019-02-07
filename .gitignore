@@ -1,4 +1,20 @@
+<<<<<<< HEAD
 dist
 node_modules
 .DS_Store
 .nuxt
+=======
+# dependencies
+node_modules
+
+# logs
+npm-debug.log
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
+
+.DS_Store
+>>>>>>> develop

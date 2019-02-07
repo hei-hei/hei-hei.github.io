@@ -1,0 +1,31 @@
+{
+  "name": "hei-hei.github.io",
+  "version": "1.0.0",
+  "description": "My cool Nuxt.js project",
+  "author": "Chris Yang",
+  "private": true,
+  "scripts": {
+    "dev": "HOST=0.0.0.0 nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "predeploy": "nuxt generate",
+    "deploy": "gh-pages -d dist -b master --dotfiles true",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "gh-pages": "^2.0.1",
+    "node-sass": "^4.11.0",
+    "nuxt": "^2.4.2",
+    "sass-loader": "^7.1.0",
+    "terser": "^3.14.1",
+    "vue-vimeo-player": "0.0.9"
+  },
+  "devDependencies": {
+    "cross-env": "^5.0.1",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.13.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-vue": "^5.1.0"
+  }
+}
