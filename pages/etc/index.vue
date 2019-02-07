@@ -38,7 +38,7 @@ export default {
           name: '검정치마체',
           type: 'typo design',
           number: '01',
-          color: '#E53786',
+          color: '#F7F7F7',
           url: this.scaledImage(
             'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290073/heihei/chima_card_thumbnail.jpg',
           ),
@@ -47,7 +47,7 @@ export default {
           name: '이상한 숲',
           type: 'character design',
           number: '02',
-          color: '#F4F4F4',
+          color: '#CDCDCD',
           url: this.scaledImage(
             'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290075/heihei/child_card_thumbnail.jpg',
           ),
@@ -56,7 +56,7 @@ export default {
           name: 'C4D',
           type: 'c4d doodle',
           number: '03',
-          color: '#202020',
+          color: '#3A8A71',
           url: this.scaledImage(
             'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290087/heihei/c4d_card_thumbnail.jpg',
           ),

@@ -24,12 +24,11 @@
          :style="{'margin-top': '8px'}"
          :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549283270/heihei/%E1%84%81%E1%85%AE%E1%86%AF%E1%84%90%E1%85%B5%E1%86%B8%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%B3_%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%90%E1%85%B3%E1%84%85%E1%85%A9.gif'">
     <div class="text">
-      감정의 덩어리가 목에서 탁 하고 걸리다.<br>
-      <br>
-      갑작스럽게 걸려버린 감정 덩어리를<br>
-      가만히 바라보다가 기분이 이상해진다.<br>
-      물 위에 떠 있는 듯이,<br>
-      편안하지만 불편한 느낌이다<br>
+      가벼운 지식들을 다루는 에디터의 브랜드를 디자인했습니다.<br><br>
+
+지식탐탐 시리즈 같은 경우에는 가볍지만 비교적 전문적인 내용을 다루기 때문에 고서적의 컨셉으로 디자인했습니다.<br><br>
+
+꿀팁박스 시리즈는 유저들과 함께 소통하면서 서로의 꿀팁을 공유하는 시리즈이기 때문에 좀 더 가볍게 즐길 수 있도록 낙서를 이용해서 디자인했습니다.
     </div>
     <img class="image"
          :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549283249/heihei/tamtam_temp_all.jpg'">

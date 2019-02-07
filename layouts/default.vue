@@ -3,7 +3,20 @@
 </template>
 
 <script>
-export default {}
+// window.$crisp = []
+// window.CRISP_WEBSITE_ID = 'dda1bb85-52ce-4654-be41-e3c4f9409e5f'
+// (() => {
+//   const d = document
+//   const s = d.createElement('script')
+//   s.src = 'https://client.crisp.chat/l.js'
+//   s.async = 1
+//   d.getElementsByTagName('head')[0].appendChild(s)
+// })()
+export default {
+  mounted() {
+    window.addEventListener('pageshow', () => {})
+  },
+}
 </script>
 
 <style lang="scss">
@@ -11,16 +24,18 @@ html {
   font-family: 'NanumSquareOTF', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
-  word-spacing: 1px;
+  /* word-spacing: 1px; */
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  word-break: keep-all;
 }
 *,
 *:before,
 *:after {
+  letter-spacing: -0.03em;
   box-sizing: border-box;
   margin: 0;
 }
@@ -36,20 +51,14 @@ body,
 html {
   /* background-color: black; */
 }
-#__nuxt {
-  /* background-color: white; */
-  position: absolute;
-  width: 100%;
-  max-width: 500px;
-  min-width: 300px;
-  margin: auto;
-  left: 0;
-  right: 0;
-}
 
 #__nuxt {
+  display: grid;
 }
 #__layout {
+  justify-self: center;
+  max-width: 500px;
+  width: 100%;
 }
 ::-webkit-scrollbar {
   width: 0px; /* remove scrollbar space */

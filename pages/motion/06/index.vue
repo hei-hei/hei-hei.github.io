@@ -19,29 +19,38 @@
       </div>
     </div>
     <!-- <div class="rect"> -->
-    <!-- <iframe src="https://player.vimeo.com/video/315235239?autoplay=1&loop=1&muted=1&autopause=0&title=0&byline=0"
-              ref="player"
-              id="player"
-              class="video"
-              :width="width"
-              :height="width*9/16"
-              frameborder="0"></iframe> -->
+    <iframe src="https://player.vimeo.com/video/315235239?autoplay=1&loop=1&muted=1&autopause=0&title=0&byline=0"
+            ref="player"
+            id="player"
+            class="video"
+            :width="width"
+            :height="width*9/16"
+            :style="{'background-image': `url('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549354415/heihei/image4.jpg')`}"
+            frameborder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen></iframe>
     <!-- </div> -->
-    <vimeo-player ref="player"
+    <!-- <vimeo-player ref="player"
                   class="video"
                   :video-id="315235239"
                   :player-width="width"
                   :player-height="width*9/16"
                   :loop="true"
-                  :autoplay="true" />
+                  :autoplay="true" /> -->
+    <!-- <video :width="width"
+           :height="width*9/16"
+           controls
+           autoplay
+           loop
+           muted
+           preload
+           src="https://res.cloudinary.com/dvcuac7zg/video/upload/v1549342957/heihei/Comp_1.mp4">
+    </video> -->
     <div class="text">
-      피키캐스트에서 할로윈 시기에 맞추어 앱 시작할 때, 나타나는<br>
-      이미지 피키캐스트의 캐릭터들을 활용하여 제작했습니다.<br>
-      <br>
-      2초가량의 짧은 짤이지만 다양한 움직임을 보여주려했습니다.<br>
-      <br>
-      아이패드로 이미지를 제작하고 에펙으로 움직임을 준 뒤<br>
-      포토샵에서 마무리 작업을 했습니다.
+      나의 개인적인 공간에 대한 주제로 나의 방을 표현했습니다.<br><br>
+
+      혼자 휴대폰을 챙기고 2층 침대의 아랫칸에 들어가면 외부와 멀어지면서 나만의 공간이 생기는 듯한 느낌을 받습니다. 그 느낌을 일반적인 방일 때와 불을 끄고 핸드폰을 딱 켰을 때 배경의 색상을 다르게 해서 강조했고, 화면 안에서 파티클이 나오면서 즐거운 느낌을 주고자 했습니다.
     </div>
     <copy-right />
   </section>
@@ -131,6 +140,11 @@ export default {
       color: rgba(0, 0, 0, 0.38);
     }
   }
+  .video {
+    display: block;
+    width: 100%;
+    background-size: contain;
+  }
   .rect {
     padding-top: 56.25%;
     position: relative;
@@ -166,7 +180,7 @@ export default {
   .text {
     margin-top: 24px;
     margin-left: 37px;
-    margin-right: 37px;
+    margin-right: 39px;
     margin-bottom: 30px;
     line-height: 19px;
     font-size: 12px;

@@ -38,7 +38,7 @@ export default {
           name: '귤잼',
           type: 'contents design',
           number: '01',
-          color: '#E53786',
+          color: '#FAE25C',
           url: this.scaledImage(
             'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290123/heihei/jam_card_thumbnail.jpg',
           ),
@@ -47,7 +47,7 @@ export default {
           name: '소핫',
           type: 'contents design',
           number: '02',
-          color: '#F4F4F4',
+          color: '#622593',
           url: this.scaledImage(
             'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290133/heihei/sohot_card_thumbnail.jpg',
           ),
@@ -56,7 +56,7 @@ export default {
           name: '지식탐탐',
           type: 'contents design',
           number: '03',
-          color: '#202020',
+          color: '#B7B7B7',
           url: this.scaledImage(
             'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290391/heihei/tamyam_card_thumbnail-1.jpg',
           ),
@@ -65,7 +65,7 @@ export default {
           name: '아카이브',
           type: 'contents design',
           number: '04',
-          color: '#F4F4F4',
+          color: '#0F151C',
           url: this.scaledImage(
             'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290116/heihei/archive_card_thumbnail.jpg',
           ),
@@ -74,7 +74,7 @@ export default {
           name: 'piki enter',
           type: 'contents design',
           number: '05',
-          color: '#F4F4F4',
+          color: '#181818',
           url: this.scaledImage(
             'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290083/heihei/enter_card_thumbnail.jpg',
           ),
@@ -83,7 +83,7 @@ export default {
           name: 'dode',
           type: 'logo design',
           number: '06',
-          color: '#F4F4F4',
+          color: '#032EC1',
           url: this.scaledImage(
             'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290095/heihei/dode_card_thumbnail.jpg',
           ),

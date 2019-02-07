@@ -1,5 +1,6 @@
 <template>
-  <section class="container">
+  <section class="container"
+           ref="container">
     <div class="top">
       <img class="logo"
            src="https://images.velog.io/post-images/chris/18f010b0-276f-11e9-8a2a-c90b1e879aba/heilogo.svg">
@@ -11,7 +12,9 @@
         <span class="ko"
               v-if="nameToggle">황희영</span>
         <span class="en"
-              v-else>Hei-Hei</span> 입니다.
+              v-else>Hei-Hei</span>
+        <!-- <div class="name"></div>  -->
+        입니다.
       </div>
       <a class="insta"
          @click="instaClick">
@@ -26,8 +29,11 @@
            :key="item.title"
            :style="{ 'background-color': item.color}"
            @click="$router.push(item.title)">
-        <img class="bg"
-             :src="item.url">
+        <div class="bg"
+             :style="{
+               'background-image': `url(${item.url})`,
+               'background-position': `0% ${item.positionY}%`
+               }" />
         <div class="title">{{ item.title }}</div>
         <img class="arrow"
              src="https://images.velog.io/post-images/chris/a3b24650-2774-11e9-8a2a-c90b1e879aba/arrowright.svg">
@@ -50,38 +56,53 @@ export default {
       list: [
         {
           title: 'motion',
-          color: '#FFD600',
+          color: '#E53786',
           url: this.scaledImage(
-            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549292142/heihei/line_1st_thumbnail.jpg',
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549214397/heihei/%E1%84%89%E1%85%A5%E1%86%AB_thumbnail_1.jpg',
           ),
+          parallaxMinY: 10,
+          parallaxMaxY: 40,
+          positionY: 10,
         },
         {
           title: 'illust',
-          color: '#009974',
+          color: '#F5F5F5',
           url: this.scaledImage(
-            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549292142/heihei/monami_1st_thumbnail.jpg',
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287328/heihei/monami_card_thumbnail-1.jpg',
           ),
+          parallaxMinY: 11,
+          parallaxMaxY: 50,
+          positionY: 11,
         },
         {
           title: 'graphic',
-          color: '#436EC1',
+          color: '#C9CBCA',
           url: this.scaledImage(
-            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549292695/heihei/somul_1st_thumbnail.jpg',
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290397/heihei/somul_card_thumbnail-1.jpg',
           ),
+          parallaxMinY: 0,
+          parallaxMaxY: 23,
+          positionY: 0,
         },
         {
           title: 'branding',
-          color: '#E5E5E5',
+          color: '#F9E15C',
           url: this.scaledImage(
-            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549292142/heihei/jam_1st_thumbnail.jpg',
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290123/heihei/jam_card_thumbnail.jpg',
           ),
+          parallaxMinY: 5,
+          parallaxMaxY: 50,
+          positionY: 5,
         },
         {
           title: 'etc',
-          color: '#FFFFFF',
+          color: '#F7F7F7',
           url: this.scaledImage(
-            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549292142/heihei/chima_1st_thumbnail.jpg',
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290073/heihei/chima_card_thumbnail.jpg',
           ),
+          parallaxMinY: 28,
+          parallaxMaxY: 60,
+          positionY: 28,
         },
       ],
     }
@@ -90,11 +111,26 @@ export default {
     setInterval(() => {
       this.nameToggle = !this.nameToggle
     }, 3000)
+    window.addEventListener('scroll', this.scrolled)
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.scrolled)
   },
   methods: {
     instaClick: () => window.open('https://instagram.com/hei_hi_hei'),
     scaledImage(url) {
-      return url && url.slice(0, 50) + 'c_scale,w_750/' + url.slice(50)
+      return url && url.slice(0, 50) + 'c_scale,w_1500/' + url.slice(50)
+    },
+    scrolled() {
+      const container = this.$refs.container
+      if (!container) return
+      console.log({ scroll: window.scrollY, height: this.$refs.container.clientHeight })
+      this.list.map(
+        item =>
+          (item.positionY =
+            (item.parallaxMaxY - item.parallaxMinY) * (window.scrollY / (container.clientHeight - window.innerHeight)) +
+            item.parallaxMinY),
+      )
     },
   },
   transition: {
@@ -131,12 +167,36 @@ export default {
       .en {
         font-weight: 550;
       }
+      @keyframes changeLetter {
+        0% {
+          content: '황희영';
+        }
+        50% {
+          color: white;
+        }
+        100% {
+          content: 'HeiHei';
+        }
+      }
+      .name {
+        display: inline-block;
+        width: 47.22px;
+        &::after {
+          content: '';
+          animation: changeLetter 3s linear infinite alternate;
+        }
+      }
     }
     .insta {
       margin-top: 23px;
       display: inline-flex;
       height: 20px;
       cursor: pointer;
+      /* touch-action: none; */
+      &:active, &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 1px;
+      }
       &__logo {
         width: 13px;
       }
@@ -154,7 +214,19 @@ export default {
       cursor: pointer;
       position: relative;
       padding-top: 38.133333333%;
+      overflow: hidden;
+      touch-action: none;
+      user-select: none;
+      &:hover,
       &:active {
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.1);
+        }
       }
       &::before {
         content: '';
@@ -168,9 +240,15 @@ export default {
         clip: rect(40px, 9999px, 68px, 0px);
       }
       .bg {
+        display: block;
         position: absolute;
         top: 0;
+        left: 0;
+        right: 0;
         width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
       }
       .title {
         position: absolute;

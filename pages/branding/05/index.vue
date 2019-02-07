@@ -17,34 +17,43 @@
       </div>
     </div>
     <!-- <div class="rect"> -->
-    <!-- <iframe src="https://player.vimeo.com/video/315238389?autoplay=1&loop=1&muted=1&autopause=0&title=0&byline=0"
-              ref="player"
-              id="player"
-              class="video"
-              :width="width"
-              :height="width"
-              frameborder="0"></iframe> -->
-    <vimeo-player ref="player"
+    <iframe src="https://player.vimeo.com/video/315238389?autoplay=1&loop=1&muted=1&autopause=0&title=0&byline=0"
+            ref="player"
+            id="player"
+            class="video"
+            :width="width"
+            :height="width"
+            :style="{'margin-top': '8px','background-image': `url('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549354415/heihei/image7.jpg')`}"
+            frameborder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen></iframe>
+    <!-- <vimeo-player ref="player"
                   class="video"
                   :video-id="315238389"
                   :player-width="width"
                   :player-height="width"
                   :loop="true"
-                  :autoplay="true" />
+                  :autoplay="true" /> -->
+    <!-- <video :width="width"
+           :height="width"
+           controls
+           autoplay
+           loop
+           muted
+           preload
+           src="https://res.cloudinary.com/dvcuac7zg/video/upload/v1549342688/heihei/%E1%84%8F%E1%85%A5%E1%86%B7%E1%84%91%E1%85%A9%E1%84%8C%E1%85%B5%E1%84%89%E1%85%A7%E1%86%AB_1.mp4">
+    </video> -->
     <!-- </div> -->
     <div class="text">
-      감정의 덩어리가 목에서 탁 하고 걸리다.<br>
-      <br>
-      갑작스럽게 걸려버린 감정 덩어리를<br>
-      가만히 바라보다가 기분이 이상해진다.<br>
-      물 위에 떠 있는 듯이,<br>
-      편안하지만 불편한 느낌이다<br>
+      엔터테이먼트 중심의 뉴스와 컨텐츠를 다루는 에디터의 계정 브랜딩입니다. 엔터테이먼트의 엔터와 피키를 합쳐 피키엔터라는 이름으로 디자인을 진행했습니다.<br><br>
+
+      엔터테이먼트의 엔터와 키보드자판의 엔터의 유사성을 이용해서 키보드를 누르는 모션을 주고 전반적인 로고의 디자인 또한 버튼의 느낌이 나도록 디자인했습니다.
     </div>
     <img class="image"
          :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549283179/heihei/pikienter_logo.jpg'">
     <div class="text">
-      감정의 덩어리가 목에서 탁 하고 걸리다.<br>
-      감정의 덩어리가 목에서 탁 하고 걸리다.
+      가장 위에서부터 영상용 로고, 일반로고, 흑,백버전 로고 베리에이션입니다.
     </div>
     <copy-right />
   </section>
@@ -133,6 +142,11 @@ export default {
       font-size: 12px;
       color: rgba(0, 0, 0, 0.38);
     }
+  }
+  .video {
+    display: block;
+    width: 100%;
+    background-size: contain;
   }
   .rect {
     padding-top: 100%;

@@ -26,35 +26,33 @@
          :style="{'margin-top': '8px'}"
          :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282769/heihei/sohot_end.gif'">
     <div class="text">
-      감정의 덩어리가 목에서 탁 하고 걸리다.<br>
-      <br>
-      갑작스럽게 걸려버린 감정 덩어리를<br>
-      가만히 바라보다가 기분이 이상해진다.<br>
-      물 위에 떠 있는 듯이,<br>
-      편안하지만 불편한 느낌이다<br>
+      기존에 있던 에디터 소핫의 캐릭터를 두명으로 각자의 개성을 살리도록 리디자인했으며 색감도 기존의 보라색을 유지하면서 분위기를 밝히기 위해 붉은 보라색에서 푸른보라로 선명해 보일 수 있도록 수정했습니다.
     </div>
     <img class="image"
          :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282765/heihei/%E1%84%89%E1%85%A9%E1%84%92%E1%85%A1%E1%86%BA_%E1%84%90%E1%85%A6%E1%86%B7%E1%84%91%E1%85%B3%E1%86%AF%E1%84%85%E1%85%B5%E1%86%BA_%E1%84%86%E1%85%A9%E1%84%8B%E1%85%B3%E1%86%B7%E1%84%8C%E1%85%B5%E1%86%B8.jpg'">
-    <!-- <div class="rect" -->
-    <!-- :style="{'margin-top': '8px'}"> -->
-    <!-- <iframe src="https://player.vimeo.com/video/315238701?autoplay=1&loop=1&muted=1&autopause=0&title=0&byline=0"
-              ref="player"
-              id="player"
-              class="video"
-              :width="width"
-              :height="width"
-              frameborder="0"></iframe> -->
-    <!-- </div>
-    <div class="rect" -->
-    <!-- :style="{'margin-top': '8px'}"> -->
-    <!-- <iframe src="https://player.vimeo.com/video/315238678?autoplay=1&loop=1&muted=1&autopause=0&title=0&byline=0"
-              ref="player"
-              id="player"
-              class="video"
-              :width="width"
-              :height="width"
-              frameborder="0"></iframe> -->
-    <vimeo-player ref="player"
+    <iframe src="https://player.vimeo.com/video/315238701?autoplay=1&loop=1&muted=1&autopause=0&title=0&byline=0"
+            ref="player"
+            id="player"
+            class="video"
+            :width="width"
+            :height="width"
+            :style="{'margin-top': '8px','background-image': `url('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549354415/heihei/image5.jpg')`}"
+            frameborder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen></iframe>
+    <iframe src="https://player.vimeo.com/video/315238678?autoplay=1&loop=1&muted=1&autopause=0&title=0&byline=0"
+            ref="player"
+            id="player"
+            :style="{'margin-top': '8px','background-image': `url('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549354415/heihei/image6.jpg')`}"
+            class="video"
+            :width="width"
+            :height="width"
+            frameborder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen></iframe>
+    <!-- <vimeo-player ref="player"
                   class="video"
                   :style="{'margin-top': '8px'}"
                   :video-id="315238701"
@@ -71,7 +69,25 @@
                   :player-height="width"
                   :loop="true"
                   :autoplay="true"
-                  :options="{ autopause: false }" />
+                  :options="{ autopause: false }" /> -->
+    <!-- <video :width="width"
+           :height="width"
+           controls
+           autoplay
+           loop
+           muted
+           preload
+           src="https://res.cloudinary.com/dvcuac7zg/video/upload/v1549342684/heihei/sohot_1%EB%B6%84%EB%A6%AC%EB%B7%B0_%EC%98%A4%ED%94%84%EB%8B%9D_%EC%A0%95%EB%B0%A9%ED%98%952_3.mp4">
+    </video>
+    <video :width="width"
+           :height="width"
+           controls
+           autoplay
+           loop
+           muted
+           preload
+           src="https://res.cloudinary.com/dvcuac7zg/video/upload/v1549342683/heihei/sohot_1%E1%84%87%E1%85%AE%E1%86%AB%E1%84%85%E1%85%B5%E1%84%87%E1%85%B2_%E1%84%8B%E1%85%A6%E1%86%AB%E1%84%83%E1%85%B5%E1%86%BC%E1%84%8F%E1%85%B3%E1%84%85%E1%85%A6%E1%84%83%E1%85%B5%E1%86%BA_%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%87%E1%85%A1%E1%86%BC%E1%84%92%E1%85%A7%E1%86%BC.mp4">
+    </video> -->
     <!-- </div> -->
     <div class="grid"
          :style="{'margin-top': '8px'}">
@@ -174,6 +190,11 @@ export default {
       font-size: 12px;
       color: rgba(0, 0, 0, 0.38);
     }
+  }
+  .video {
+    display: block;
+    width: 100%;
+    background-size: contain;
   }
   .rect {
     padding-top: 100%;

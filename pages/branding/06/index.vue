@@ -19,12 +19,10 @@
     <img class="image"
          :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549285243/heihei/dode_logo.jpg'">
     <div class="text">
-      감정의 덩어리가 목에서 탁 하고 걸리다.<br>
-      <br>
-      갑작스럽게 걸려버린 감정 덩어리를<br>
-      가만히 바라보다가 기분이 이상해진다.<br>
-      물 위에 떠 있는 듯이,<br>
-      편안하지만 불편한 느낌이다<br>
+      디자인 코드를 공부하는 스터디모임의 로고입니다. 프레이머X를 공부하는 모임이기 때문에 uxui에 많이 사용되는 에셋들을 단순화 시켜 로고안의 각 알파벳 사이사이에 넣었습니다.<br><br>
+
+      위의 왼쪽과 오른쪽의 로고는 아래 로고의 심볼버전입니다.<br>
+      스터디모임의 느낌을 줄 수 있도록 푸른색을 사용했습니다.
     </div>
     <copy-right />
   </section>

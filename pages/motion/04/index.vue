@@ -18,22 +18,29 @@
         Lico애니메이션의 특별영상
       </div>
     </div>
-    <!-- <iframe src="https://player.vimeo.com/video/315234880?autoplay=1&loop=1&muted=1&autopause=0&title=0&byline=0"
+    <iframe src="https://player.vimeo.com/video/315234880?autoplay=1&loop=1&muted=1&autopause=0&title=0&byline=0"
             ref="player"
             id="player"
             class="video"
             :width="width"
             :height="width*9/16"
-            frameborder="0"></iframe>
+            :style="{'background-image': `url('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549354415/heihei/image1.jpg')`}"
+            frameborder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen></iframe>
     <iframe src="https://player.vimeo.com/video/315234640?autoplay=1&loop=1&muted=1&autopause=0&title=0&byline=0"
             ref="player"
             id="player"
             class="video"
-            :style="{'margin-top': '8px'}"
+            :style="{'margin-top': '8px', 'background-image': `url('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549354415/heihei/image2.jpg')`}"
             :width="width"
             :height="width*9/16"
-            frameborder="0"></iframe> -->
-    <vimeo-player ref="player"
+            frameborder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen></iframe>
+    <!-- <vimeo-player ref="player"
                   class="video"
                   :video-id="315234880"
                   :player-width="width"
@@ -49,15 +56,30 @@
                   :player-height="width*9/16"
                   :loop="true"
                   :autoplay="true"
-                  :options="{ autopause: false }" />
+                  :options="{ autopause: false }" /> -->
+    <!-- <video :width="width"
+           :height="width*9/16"
+           controls
+           autoplay
+           loop
+           muted
+           preload
+           src="https://res.cloudinary.com/dvcuac7zg/video/upload/v1549343001/heihei/yeowook_comp.mp4">
+    </video>
+    <video :width="width"
+           :height="width*9/16"
+           :style="{'margin-top': '8px'}"
+           controls
+           autoplay
+           loop
+           muted
+           preload
+           src="https://res.cloudinary.com/dvcuac7zg/video/upload/v1549342957/heihei/hayeon_comp.mp4">
+    </video> -->
     <div class="text">
-      피키캐스트에서 할로윈 시기에 맞추어 앱 시작할 때, 나타나는<br>
-      이미지 피키캐스트의 캐릭터들을 활용하여 제작했습니다.<br>
-      <br>
-      2초가량의 짧은 짤이지만 다양한 움직임을 보여주려했습니다.<br>
-      <br>
-      아이패드로 이미지를 제작하고 에펙으로 움직임을 준 뒤<br>
-      포토샵에서 마무리 작업을 했습니다.
+      이 프로젝트는 life is comic의 애니메이션인 연애 하루전의 시즌 1이 끝나고 시즌 0가 나오기 전에 독자들이 즐길 수 있는 영상을 만드는 것이 목표였습니다. 유튜브에도 배포할 영상이였기 때문에 유튜브 영상의 트렌드와 꾸준히 사랑받는 컨텐츠에 대해서 공부했고, 옛날 게임분위기의 영상들은 현재도 꾸준히 올라오고 있고 과거의 영상도 사람들이 즐겨본다는 것을 알 수 있었습니다.<br><br>
+
+      그래서 8bit컨셉의 연애 하루 전 특별영상을 만들었습니다.
     </div>
     <img class="image"
          :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549285762/heihei/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA01.jpg'">
@@ -68,11 +90,11 @@
          :style="{'margin-top': '8px'}"
          :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549285762/heihei/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA03.jpg'">
     <div class="text">
-      원래 애니메이션의 분위기가 수채화느낌이 강한 순정만화에 가까웠기 때문에 도트디자인으로 진행했을때 분위기가 따로 놀지 않도록 색감을 기존의 색상보다 더 파스텔톤으로 잡았습니다.<br>
-      <br>
-      욱, 여름커플과 하은, 연우커플의 대표적인 색상이 있어서 그 부분 또한 신경써서 디자인했습니다.<br>
-      <br>
-      외등등 외등등
+      원래 애니메이션의 분위기가 수채화느낌이 강한 순정만화에 가까웠기 때문에 도트디자인으로 진행했을때 분위기가 따로 놀지 않도록 색감을 기존의 색상보다 더 파스텔톤으로 잡았습니다.<br><br>
+
+      또한 게임적인 요소를 놓치지 않기 위해 각 스토리에 맞는 아이템을 선정하고, 인트로, 하이라이트 장면 등의 소스들도 스토리에 걸맞게 디자인했습니다.<br><br>
+
+      욱, 여름커플과 하은, 연우커플각각의 대표적인 색상인 주홍빛 도는 노랑, 파랑, 연두, 보라 이 네가지 색상이 있어서 그 부분 또한 강조될 수 있도록 디자인했습니다.
     </div>
     <img class="image"
          :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549285764/heihei/source_all.jpg'">
@@ -164,7 +186,11 @@ export default {
       color: rgba(0, 0, 0, 0.38);
     }
   }
-
+  .video {
+    display: block;
+    width: 100%;
+    background-size: contain;
+  }
   .rect {
     padding-top: 56.25%;
     position: relative;
@@ -204,7 +230,7 @@ export default {
   .text {
     margin-top: 24px;
     margin-left: 37px;
-    margin-right: 37px;
+    margin-right: 39px;
     margin-bottom: 30px;
     line-height: 19px;
     font-size: 12px;

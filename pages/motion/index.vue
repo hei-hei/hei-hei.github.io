@@ -19,7 +19,7 @@
       <div class="type">{{ item.type }}</div>
       <div class="number">{{ item.number }}</div>
     </div>
-		<copy-right />
+    <copy-right />
   </section>
 </template>
 
@@ -47,7 +47,7 @@ export default {
           name: '움직임 일기',
           type: 'cell animation',
           number: '02',
-          color: '#F4F4F4',
+          color: '#FFFFFF',
           url:
             'https://res.cloudinary.com/dvcuac7zg/image/upload/c_scale,w_750/v1549218257/heihei/pf_2dAnimation_02.gif',
         },
@@ -64,7 +64,7 @@ export default {
           name: '연애 하루 전',
           type: '8bit animation',
           number: '04',
-          color: '#D5D5D5',
+          color: '#311EAD',
           url: this.scaledImage(
             'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287300/heihei/aday_card_thumbnail-1.jpg',
           ),
@@ -73,8 +73,8 @@ export default {
           name: 'JJO',
           type: 'C4D animation',
           number: '05',
-					color: '#D5D5D5',
-					url: this.scaledImage(
+          color: '#1D1B1E',
+          url: this.scaledImage(
             'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287299/heihei/jjo_card_thumbnail-1.jpg',
           ),
         },
@@ -82,8 +82,8 @@ export default {
           name: 'My Room',
           type: 'C4D animation',
           number: '06',
-					color: '#D5D5D5',
-					url: this.scaledImage(
+          color: '#5062B5',
+          url: this.scaledImage(
             'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287314/heihei/myroom_card_thumbnail-1.jpg',
           ),
         },
@@ -161,6 +161,17 @@ export default {
     line-height: 17px;
     font-size: 12px;
     cursor: pointer;
+    /* &:hover,
+    &:active {
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    } */
     .video {
       position: absolute;
       top: 0;

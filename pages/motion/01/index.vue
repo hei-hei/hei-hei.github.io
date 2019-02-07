@@ -19,16 +19,17 @@
       </div>
     </div>
     <!-- <div class="rect"> -->
-    <!-- <iframe src="https://player.vimeo.com/video/315234345?autoplay=1&loop=1&muted=1&autopause=0&title=0&byline=0"
+    <iframe src="https://player.vimeo.com/video/315234345?autoplay=1&loop=1&muted=1&autopause=0&title=0&byline=0"
             ref="player"
             id="player"
             class="video"
             :width="width"
             :height="width*16/9"
             frameborder="0"
+            :style="{'background-image': `url('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549354414/heihei/image-0001.jpg')`}"
             webkitallowfullscreen
             mozallowfullscreen
-            allowfullscreen></iframe> -->
+            allowfullscreen></iframe>
     <!-- <iframe src="https://player.vimeo.com/video/315234345"
             ref="player"
             id="player"
@@ -39,13 +40,22 @@
             webkitallowfullscreen
             mozallowfullscreen
             allowfullscreen></iframe> -->
-    <vimeo-player ref="player"
+    <!-- <vimeo-player ref="player"
                   class="video"
                   :video-id="315234345"
                   :player-width="width"
                   :player-height="width*16/9"
                   :loop="true"
-                  :autoplay="true" />
+                  :autoplay="true" /> -->
+    <!-- <video :width="width"
+           :height="width*16/9"
+           controls
+           autoplay
+           loop
+           muted
+           preload
+           src="https://res.cloudinary.com/dvcuac7zg/video/upload/v1549343431/heihei/%E1%84%89%E1%85%A5%E1%86%AB_final_dotversion_low.mp4">
+    </video> -->
     <!-- </div> -->
     <div class="text">
       감정의 덩어리가 목에서 탁 하고 걸리다.<br><br>
@@ -76,9 +86,10 @@
     <div class="text">
       초기의 스토리보드와 키비주얼입니다.<br><br>
 
-      여기에는 어떻게 생각을 시작하여 이 영상을 제작하게 되었는지, <br>어떤 의미를 담고자 하였는지에 대해서 쓰면 됩니다.<br><br>
+      사람들은 각자 자신만의 선을 가지고 있습니다. 그 선을 넘으면 자신을 크게 달라지고, 좀 더 나은 사람이 될 것이라 꿈꾸지만
+      남들을 따라 넘어갔던 선은 그 선 밖에서 휩쓸릴 수 밖에 없고, 안정을 찾으면 또 다른 선에 멈춰서게 된다고 생각했습니다.<br><br>
 
-      세문단 정도가 나오면 좋을 것 같습니다,<br> 기본적인 정보인 제작 시기도 함께 적어주면 좋을 듯 싶습니다.
+      이러한 저의 선에 대한 생각들을 엮어서 하나의 영상으로 만든 작품이 “선_line” 입니다. 앞서 적은 글을 함께 곁들여 영상을 보시기 바랍니다.
     </div>
     <img class="image"
          :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549214009/heihei/card_mockup.jpg')">
@@ -175,6 +186,7 @@ export default {
   .video {
     display: block;
     width: 100%;
+    background-size: contain;
   }
   .rect {
     padding-top: 177.777777778%;
@@ -225,6 +237,7 @@ export default {
   .text {
     margin-top: 24px;
     margin-left: 37px;
+    margin-right: 39px;
     margin-bottom: 30px;
     line-height: 19px;
     font-size: 12px;

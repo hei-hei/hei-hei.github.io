@@ -29,9 +29,7 @@
       </div>
     </div>
     <div class="text">
-      갑작스럽게 걸려버린 감정 덩어리를<br>
-      가만히 바라보다가 기분이 이상해진다.<br>
-      물 위에 떠 있는 듯이,
+      노트북 하다가 녹아내리는 친구의 모습, 책에 집중해서 아무것도 신경쓰지 않는 친구의 모습, 귀여운 강아지의 모습 등, 주변에서 볼 수 있는 재밌는 움직임들을 그렸습니다.
     </div>
     <div class="rect">
       <div class="left">
@@ -195,10 +193,12 @@ export default {
   .text {
     margin-top: 24px;
     margin-left: 37px;
+    margin-right: 39px;
     margin-bottom: 30px;
     line-height: 19px;
     font-size: 12px;
     color: rgba(0, 0, 0, 0.54);
+    letter-spacing: -0.03em;
   }
   .image {
     display: block;

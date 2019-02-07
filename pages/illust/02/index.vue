@@ -24,7 +24,7 @@
          :style="{'margin-top': '8px'}"
          :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549265460/heihei/IMG_2740.png')">
     <div class="text">
-      모나미의 cvs전략으로, 20대 층을 타겟으로 삼아 black run이라는 청춘마라톤을 기획했습니다. 그 기획에서 다양한 사람들이 다양한 생각을 가지고 달리자는 컨셉을 중심으로 진행했고, 다양한 사람들을 모나미의 대표 문구들을 이용해서 표현하거나, 긍정적인 모습을 보여주는 캐릭터들을 디자인하여 행사 전반의 분위기를 가깝고 쉽게 접할 수 있음을 보여주려 했습니다.
+      ‘그 이후로도 오랫동안' 이라는 편집물을 제작하면서 삽화로 그린 그림입니다. 왕따라는 주제로 왕따 트라우마는 시간이 지나도 오랫동안 마음속에 응어리로 남는다는 메시지를 마음속의 돌덩어리로 표현했습니다.
     </div>
     <img class="image"
          :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549265456/heihei/05.jpg')">
@@ -32,7 +32,9 @@
          :style="{'margin-top': '8px'}"
          :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549265458/heihei/01.jpg')">
     <div class="text">
-      모나미의 cvs전략으로, 20대 층을 타겟으로 삼아 black run이라는 청춘마라톤을 기획했습니다. 그 기획에서 다양한 사람들이 다양한 생각을 가지고 달리자는 컨셉을 중심으로 진행했고, 다양한 사람들을 모나미의 대표 문구들을 이용해서 표현하거나, 긍정적인 모습을 보여주는 캐릭터들을 디자인하여 행사 전반의 분위기를 가깝고 쉽게 접할 수 있음을 보여주려 했습니다.
+      페이지 사이사이마다 마지막에 나올 그래프에 대한 정보들을 배경으로 깔아서 마음 속의 응어리를 계속 짊어지고 간다는 것을 표현했습니다.<br><br>
+
+      위의 그래프는 왕따에 대한 생각을 청소년들에게 설문했을 때의 결과이고, 아래의 그래프는 포털사이트에서의 검색량을 기준으로 왕따에 관련한 정보들을 시기별로 얼마나 어떻게 검색하는지에 대한 내용입니다.
     </div>
     <img class="image"
          :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549265459/heihei/IMG_2738_%E1%84%89%E1%85%A1%E1%84%87%E1%85%A9%E1%86%AB.png')">

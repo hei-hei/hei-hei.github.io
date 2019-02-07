@@ -24,12 +24,9 @@
          :style="{'margin-top': '8px'}"
          :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549283169/heihei/%E1%84%8B%E1%85%A1%E1%84%8F%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B32_%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%AE%E1%84%90%E1%85%B3%E1%84%85%E1%85%A92_%E1%84%89%E1%85%AE%E1%84%8C%E1%85%A5%E1%86%BC.gif'">
     <div class="text">
-      감정의 덩어리가 목에서 탁 하고 걸리다.<br>
-      <br>
-      갑작스럽게 걸려버린 감정 덩어리를<br>
-      가만히 바라보다가 기분이 이상해진다.<br>
-      물 위에 떠 있는 듯이,<br>
-      편안하지만 불편한 느낌이다<br>
+      세계대전 1,2의 역사를 다루는 에디터의 컨텐츠 디자인입니다.<br><br>
+
+      기존의 컨텐츠와는 달리 무거운 이야기를 전달하기 때문에 어두운 톤과 거친 질감을 사용했습니다.
     </div>
     <img class="image"
          :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549283170/heihei/%E1%84%8B%E1%85%A1%E1%84%8F%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B3_temp_all.jpg'">

@@ -26,12 +26,9 @@
          :style="{'margin-top': '8px'}"
          :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282235/heihei/jam_outro.gif'">
     <div class="text">
-      감정의 덩어리가 목에서 탁 하고 걸리다.<br>
-      <br>
-      갑작스럽게 걸려버린 감정 덩어리를<br>
-      가만히 바라보다가 기분이 이상해진다.<br>
-      물 위에 떠 있는 듯이,<br>
-      편안하지만 불편한 느낌이다<br>
+      귤잼의 컨텐츠들은 가족톡이나 아기사진등 귀엽고 가족적인 분위기를 띄기 때문에 캐릭터 또한 최대한 귀엽게 표현했습니다.<br><br>
+
+      귤껍질을 이용해서 머리카락을 만들고 아기의 이미지가 강하도록 하기 위해 볼을 빵빵하게 그렸습니다.
     </div>
     <div class="rect">
       <img class="image"

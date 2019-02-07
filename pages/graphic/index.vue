@@ -38,7 +38,7 @@ export default {
           name: '소프트웨어에 물들다',
           type: 'poster graphic',
           number: '01',
-          color: '#E53786',
+          color: '#CED0CF',
           url: this.scaledImage(
             'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290397/heihei/somul_card_thumbnail-1.jpg',
           ),
@@ -47,7 +47,7 @@ export default {
           name: '찍히면 죽는다',
           type: 'poster graphic',
           number: '02',
-          color: '#F4F4F4',
+          color: '#1A1A1A',
           url: this.scaledImage(
             'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290149/heihei/mart_card_thumbnail.jpg',
           ),

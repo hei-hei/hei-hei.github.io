@@ -19,22 +19,12 @@
     <img class="image"
          :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287789/heihei/typo_d_%E1%84%80%E1%85%A5%E1%86%B7%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%8E%E1%85%B5%E1%84%86%E1%85%A1%E1%84%8E%E1%85%A6_%E1%84%86%E1%85%A9%E1%84%8B%E1%85%B3%E1%86%B7.jpg'">
     <div class="text">
-      감정의 덩어리가 목에서 탁 하고 걸리다.<br>
-      <br>
-      갑작스럽게 걸려버린 감정 덩어리를<br>
-      가만히 바라보다가 기분이 이상해진다.<br>
-      물 위에 떠 있는 듯이,<br>
-      편안하지만 불편한 느낌이다<br>
+      개인적으로 느꼈던 밴드 검정치마의 특유의 분위기인, 무심하면서도 단단한 느낌을 폰트로 만들어봤습니다.
     </div>
     <img class="image"
          :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287789/heihei/typo_d_%E1%84%80%E1%85%A5%E1%86%B7%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%8E%E1%85%B5%E1%84%86%E1%85%A1%E1%84%8E%E1%85%A6.jpg'">
     <div class="text">
-      감정의 덩어리가 목에서 탁 하고 걸리다.<br>
-      <br>
-      갑작스럽게 걸려버린 감정 덩어리를<br>
-      가만히 바라보다가 기분이 이상해진다.<br>
-      물 위에 떠 있는 듯이,<br>
-      편안하지만 불편한 느낌이다<br>
+      검정치마의 곡 “i like watching you go” 의 가사 일부분입니다.
     </div>
     <copy-right />
   </section>

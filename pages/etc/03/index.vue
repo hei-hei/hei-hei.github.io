@@ -16,23 +16,34 @@
         3d 작업물 모음
       </div>
     </div>
-    <!-- <div class="rect">
-      <iframe src="https://player.vimeo.com/video/315234295?autoplay=1&loop=1&muted=1&autopause=0&background=1&title=0&byline=0"
-              ref="player"
-              id="player"
-              class="video"
-              :width="width"
-              :height="width*9/16"
-              frameborder="0"></iframe>
-    </div> -->
-    <vimeo-player ref="player"
+    <!-- <vimeo-player ref="player"
                   class="video"
                   :video-id="315234295"
                   :player-width="width"
                   :player-height="width*9/16"
                   :loop="true"
                   :autoplay="true"
-                  :options="{ autopause: false }" />
+                  :options="{ autopause: false }" /> -->
+    <iframe src="https://player.vimeo.com/video/315234295?autoplay=1&loop=1&muted=1&autopause=0&title=0&byline=0"
+            ref="player"
+            id="player"
+            class="video"
+            :width="width"
+            :height="width*9/16"
+            :style="{'background-image': `url('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549354415/heihei/image8.jpg')`}"
+            frameborder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen></iframe>
+    <!-- <video :width="width"
+           :height="width*9/16"
+           controls
+           autoplay
+           loop
+           muted
+           preload
+           src="https://res.cloudinary.com/dvcuac7zg/video/upload/v1549342426/heihei/02_01.mp4">
+    </video> -->
     <img class="image"
          :style="{'margin-top': '8px'}"
          :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287791/heihei/%E1%84%86%E1%85%A9%E1%84%89%E1%85%A7%E1%86%AB_01_%E1%84%87%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%BC.jpg'">
@@ -48,21 +59,35 @@
       효과와 라이트를 넣은 이미지입니다.
     </div>
     <!-- <div class="rect"> -->
-    <!-- <iframe src="https://player.vimeo.com/video/315234321?autoplay=1&loop=1&muted=1&autopause=0&title=0&byline=0"
+    <iframe src="https://player.vimeo.com/video/315234321?autoplay=1&loop=1&muted=1&autopause=0&title=0&byline=0"
             ref="player"
             id="player"
             class="video"
             :width="width"
             :height="width*9/16"
-            frameborder="0"></iframe> -->
-    <vimeo-player ref="player"
+            :style="{'background-image': `url('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549354415/heihei/image9.jpg')`}"
+            frameborder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen></iframe>
+    <!-- <vimeo-player ref="player"
                   class="video"
                   :video-id="315234321"
                   :player-width="width"
                   :player-height="width*9/16"
                   :loop="true"
                   :autoplay="true"
-                  :options="{ autopause: false }" />
+                  :options="{ autopause: false }" /> -->
+
+    <!-- <video :width="width"
+           :height="width*9/16"
+           controls
+           autoplay
+           loop
+           muted
+           preload
+           src="https://res.cloudinary.com/dvcuac7zg/video/upload/v1549342187/heihei/%E1%84%8F%E1%85%A5%E1%86%B7%E1%84%91%E1%85%A9%E1%84%8C%E1%85%B5%E1%84%89%E1%85%A7%E1%86%AB_1_1.mp4">
+    </video> -->
     <!-- </div> -->
     <div class="text">
       캐릭터의 걸음걸이와 Rigging에 대해 공부하기 위해서 만든
@@ -155,6 +180,11 @@ export default {
       font-size: 12px;
       color: rgba(0, 0, 0, 0.38);
     }
+  }
+  .video {
+    display: block;
+    width: 100%;
+    background-size: contain;
   }
   .rect {
     position: relative;

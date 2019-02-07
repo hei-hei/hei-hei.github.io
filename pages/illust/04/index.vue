@@ -19,7 +19,9 @@
     <img class="image"
          :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549266923/heihei/mafoo_%E1%84%89%E1%85%B5%E1%84%8B%E1%85%A1%E1%86%AB3.jpg')">
     <div class="text">
-      모나미의 cvs전략으로, 20대 층을 타겟으로 삼아 black run이라는 청춘마라톤을 기획했습니다. 그 기획에서 다양한 사람들이 다양한 생각을 가지고 달리자는 컨셉을 중심으로 진행했고, 다양한 사람들을 모나미의 대표 문구들을 이용해서 표현하거나, 긍정적인 모습을 보여주는 캐릭터들을 디자인하여 행사 전반의 분위기를 가깝고 쉽게 접할 수 있음을 보여주려 했습니다.
+      하림에서 새로 나오는 mafoo의 패키지 속 삽화입니다.<br><br>
+
+      사료가 만들어지는 과정을 베이킹 레시피처럼 그려 친환경적이고 건강해보이는 이미지를 만들었습니다.
     </div>
     <div class="rect">
       <div class="left">

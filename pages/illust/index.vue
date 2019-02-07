@@ -38,7 +38,7 @@ export default {
           name: '모나미',
           type: 'brand character',
           number: '01',
-          color: '#E53786',
+          color: '#F5F5F5',
           url: this.scaledImage(
             'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287328/heihei/monami_card_thumbnail-1.jpg',
           ),
@@ -47,7 +47,7 @@ export default {
           name: '그 후로도 오랫동안',
           type: 'book illust',
           number: '02',
-          color: '#F4F4F4',
+          color: '#F8F8F6',
           url: this.scaledImage(
             'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290395/heihei/afterthan_card_thumbnail-1.jpg',
           ),
@@ -56,7 +56,7 @@ export default {
           name: '제주항공 캘린더',
           type: 'calender illust',
           number: '03',
-          color: '#181017',
+          color: '#C2DCEE',
           url: this.scaledImage(
             'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290386/heihei/jeju_air_card_thumbnail-1.jpg',
           ),
@@ -65,7 +65,7 @@ export default {
           name: 'Mafoo',
           type: 'package illust',
           number: '04',
-          color: '#D5D5D5',
+          color: '#F3F3F3',
           url: this.scaledImage(
             'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290386/heihei/mafoo_card_thumbnail-1.jpg',
           ),
@@ -74,7 +74,7 @@ export default {
           name: '내 그림 찾기',
           type: 'Caricature',
           number: '05',
-          color: '#D5D5D5',
+          color: '#C5C6C0',
           url: this.scaledImage(
             'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290111/heihei/face_card_thumbnail.jpg',
           ),

@@ -19,29 +19,36 @@
       </div>
     </div>
     <!-- <div class="rect"> -->
-    <!-- <iframe src="https://player.vimeo.com/video/315235195?autoplay=1&loop=1&muted=1&autopause=0&title=0&byline=0"
+    <iframe src="https://player.vimeo.com/video/315235195?autoplay=1&loop=1&muted=1&autopause=0&title=0&byline=0"
             ref="player"
             id="player"
             class="video"
             :width="width"
             :height="width*9/16"
-            frameborder="0"></iframe> -->
-    <vimeo-player ref="player"
+            :style="{'background-image': `url('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549354415/heihei/image3.jpg')`}"
+            frameborder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen></iframe>
+    <!-- <vimeo-player ref="player"
                   class="video"
                   :video-id="315235195"
                   :player-width="width"
                   :player-height="width*9/16"
                   :loop="true"
-                  :autoplay="true" />
+                  :autoplay="true" /> -->
+    <!-- <video :width="width"
+           :height="width*9/16"
+           controls
+           autoplay
+           loop
+           muted
+           preload
+           src="https://res.cloudinary.com/dvcuac7zg/video/upload/v1549343191/heihei/%E1%84%8F%E1%85%A5%E1%86%B7%E1%84%91%E1%85%A9%E1%84%8C%E1%85%B5%E1%84%89%E1%85%A7%E1%86%AB_1_1_1.mp4">
+    </video> -->
     <!-- </div> -->
     <div class="text">
-      피키캐스트에서 할로윈 시기에 맞추어 앱 시작할 때, 나타나는<br>
-      이미지 피키캐스트의 캐릭터들을 활용하여 제작했습니다.<br>
-      <br>
-      2초가량의 짧은 짤이지만 다양한 움직임을 보여주려했습니다.<br>
-      <br>
-      아이패드로 이미지를 제작하고 에펙으로 움직임을 준 뒤<br>
-      포토샵에서 마무리 작업을 했습니다.
+      예전부터 낙서로, 작업물로 그려오던 캐릭터의 모습을 c4d로 담아냈습니다.
     </div>
     <copy-right />
   </section>
@@ -130,6 +137,11 @@ export default {
       font-size: 12px;
       color: rgba(0, 0, 0, 0.38);
     }
+  }
+  .video {
+    display: block;
+    width: 100%;
+    background-size: contain;
   }
   .rect {
     padding-top: 56.25%;

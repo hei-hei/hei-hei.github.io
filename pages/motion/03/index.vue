@@ -24,12 +24,11 @@
     </div>
     <div class="text">
       피키캐스트에서 할로윈 시기에 맞추어 앱 시작할 때, 나타나는<br>
-      이미지 피키캐스트의 캐릭터들을 활용하여 제작했습니다.<br>
-      <br>
-      2초가량의 짧은 짤이지만 다양한 움직임을 보여주려했습니다.<br>
-      <br>
-      아이패드로 이미지를 제작하고 에펙으로 움직임을 준 뒤<br>
-      포토샵에서 마무리 작업을 했습니다.
+      이미지 피키캐스트의 캐릭터들을 활용하여 제작했습니다.<br><br>
+
+      2초가량의 짧은 짤이지만 다양한 움직임을 보여주려했습니다.<br><br>
+
+      아이패드로 이미지를 제작하고 에펙으로 움직임을 준 뒤 포토샵에서 마무리 작업을 했습니다.
     </div>
     <copy-right />
   </section>
@@ -151,6 +150,7 @@ export default {
   .text {
     margin-top: 24px;
     margin-left: 37px;
+    margin-right: 39px;
     margin-bottom: 30px;
     line-height: 19px;
     font-size: 12px;

@@ -31,18 +31,14 @@
            :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549281011/heihei/0002.jpg')">
     </div>
     <div class="text">
-      감정의 덩어리가 목에서 탁 하고 걸리다.<br>
-      갑작스럽게 걸려버린 감정 덩어리를<br>
-      가만히 바라보다가 기분이 이상해진다.<br>
-      물 위에 떠 있는 듯이,
+      카메라와 마트의 콜라보인 연애 플레이 리스트의 예능입니다. 카메라와 긴밀한 컨셉을 가지고 있는 예능이기 때문에, 카메라 화면의 에셋들을 적극 활용한 시안들을 제작했습니다.
     </div>
     <img class="image"
          :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/c_scale,w_960/v1549281009/heihei/%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC_%E1%84%8D%E1%85%B5%E1%86%A8%E1%84%92%E1%85%B5%E1%84%86%E1%85%A7%E1%86%AB%E1%84%8C%E1%85%AE%E1%86%A8%E1%84%82%E1%85%B3%E1%86%AB%E1%84%83%E1%85%A1_%E1%84%91%E1%85%A9%E1%84%89%E1%85%B3%E1%84%90%E1%85%A5.jpg'">
     <div class="text">
-      감정의 덩어리가 목에서 탁 하고 걸리다.<br>
-      갑작스럽게 걸려버린 감정 덩어리를<br>
-      가만히 바라보다가 기분이 이상해진다.<br>
-      물 위에 떠 있는 듯이,
+      가장 위의 시안이 채택되었으며, 클라이언트분께서 배틀그라운드이 같이 fps 게임의 느낌이 들기를 원했기 때서 거친 질감과 대비가 드라마틱하게 보여질 수 있도록 사진을 보정하고 전체 색감을 보정했습니다.<br><br>
+
+      인물에서 시선이 많이 벗어나지 않도록 파티클 같은 경우에는 분위기를 도와줄 수 있을 정도로만 추가했습니다.
     </div>
     <copy-right />
   </section>
@@ -138,9 +134,13 @@ export default {
     line-height: 17px;
     font-size: 12px;
     display: grid;
-    grid-template-columns: 61.5% 38.5%;
-    flex-direction: column;
+    grid-auto-flow: column;
+    grid-template-columns: 61.55% 1fr;
+    /* display: flex; */
+    /* grid-template-columns: 61.5fr 38.5fr; */
     .image {
+      display: inline-block;
+      /* width: auto; */
     }
     &::before {
       z-index: 999;

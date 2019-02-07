@@ -1,4 +1,4 @@
 import Vue from 'vue'
-import vueVimeoPlayer from 'vue-vimeo-player'
+import { Plugin } from 'vue-fragment'
 
-Vue.use(vueVimeoPlayer)
+Vue.use(Plugin)
