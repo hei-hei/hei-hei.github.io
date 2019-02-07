@@ -18,6 +18,8 @@
       <div class="name">{{ item.name }}</div>
       <div class="type">{{ item.type }}</div>
       <div class="number">{{ item.number }}</div>
+      <img class="arrow"
+           src="https://images.velog.io/post-images/chris/a3b24650-2774-11e9-8a2a-c90b1e879aba/arrowright.svg">
     </div>
     <copy-right />
   </section>
@@ -164,6 +166,11 @@ export default {
     .number {
       position: absolute;
       top: 22px;
+      right: 39px;
+    }
+    .arrow {
+      position: absolute;
+      top: 50%;
       right: 39px;
     }
   }

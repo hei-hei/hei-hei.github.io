@@ -108,9 +108,9 @@ export default {
     }
   },
   mounted() {
-    setInterval(() => {
-      this.nameToggle = !this.nameToggle
-    }, 3000)
+    // setInterval(() => {
+    //   this.nameToggle = !this.nameToggle
+    // }, 3000)
     window.addEventListener('scroll', this.scrolled)
   },
   destroyed() {
