@@ -215,8 +215,8 @@ export default {
       position: relative;
       padding-top: 38.133333333%;
       overflow: hidden;
-      touch-action: none;
-      user-select: none;
+      /* touch-action: none; */
+      /* user-select: none; */
       &:hover,
       &:active {
         &::after {
