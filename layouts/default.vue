@@ -15,6 +15,7 @@
 export default {
   mounted() {
     window.addEventListener('pageshow', () => {})
+    console.log('콘솔킨 당신은 참 개발자')
   },
 }
 </script>

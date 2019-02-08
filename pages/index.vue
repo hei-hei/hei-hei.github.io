@@ -124,7 +124,6 @@ export default {
     scrolled() {
       const container = this.$refs.container
       if (!container) return
-      console.log({ scroll: window.scrollY, height: this.$refs.container.clientHeight })
       this.list.map(
         item =>
           (item.positionY =
