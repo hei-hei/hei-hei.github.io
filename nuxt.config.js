@@ -5,14 +5,25 @@ module.exports = {
 
   head: {
     title: '황희영의 포트폴리오',
+    htmlAttrs: {
+      lang: 'ko',
+    },
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        name: 'description',
+        content: '황희영의 포트폴리오',
+      },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
       { property: 'og:title', content: '황희영의 포트폴리오' },
       { property: 'og:description', content: '헤이! 안녕 헤이!🙌' },
       {
         property: 'og:image',
         content: 'https://images.velog.io/post-images/chris/892e0f80-278d-11e9-a56f-a10040ddcb91/heithumbnailx600.png',
+      },
+      {
+        'http-equiv': 'x-ua-compatible',
+        content: 'ie=edge',
       },
     ],
     link: [
