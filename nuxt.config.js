@@ -32,13 +32,13 @@ module.exports = {
         href:
           'https://res.cloudinary.com/dvcuac7zg/image/upload/c_scale,w_128/v1549212513/heihei/KakaoTalk_Photo_2019-02-04-01-48-06.png',
       },
-      {
-        rel: 'stylesheet',
-        type: 'text/css',
-        href: 'https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css',
-      },
+      // {
+      //   rel: 'stylesheet',
+      //   type: 'text/css',
+      //   href: 'https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css',
+      // },
     ],
-    script: [{ src: 'https://player.vimeo.com/api/player.js' }],
+    // script: [{ src: 'https://player.vimeo.com/api/player.js' }],
   },
 
   loading: { color: '#3B8070' },

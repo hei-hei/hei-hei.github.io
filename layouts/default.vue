@@ -14,13 +14,25 @@
 // })()
 export default {
   mounted() {
-    window.addEventListener('pageshow', () => {})
-    console.log('콘솔킨 당신은 참 개발자')
+    // window.addEventListener('pageshow', () => {})
+    console.log(
+      '%c          ',
+      'font-size: 300px; background: url(https://media.giphy.com/media/vzO0Vc8b2VBLi/giphy.gif) no-repeat; background-size: contain;',
+    )
+    console.log('%c콘솔킨 당신은 참 개발자 🤪', 'color: red; font-size: 30px')
   },
 }
 </script>
 
 <style lang="scss">
+@font-face {
+  font-family: 'NanumSquareOTF';
+  src: url('https://res.cloudinary.com/dvcuac7zg/raw/upload/v1549856055/heihei/NanumSquareOTFLight.otf') format('otf'),
+    url('https://res.cloudinary.com/dvcuac7zg/raw/upload/v1549856055/heihei/NanumSquareOTFRegular.otf') format('otf'),
+    url('https://res.cloudinary.com/dvcuac7zg/raw/upload/v1549856055/heihei/NanumSquareOTFExtraBold.otf') format('otf'),
+    url('https://res.cloudinary.com/dvcuac7zg/raw/upload/v1549856055/heihei/NanumSquareOTFBold.otf') format('otf');
+}
+
 html {
   font-family: 'NanumSquareOTF', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     'Helvetica Neue', Arial, sans-serif;

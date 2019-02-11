@@ -3,9 +3,11 @@
            ref="container">
     <div class="top">
       <img class="logo"
-           src="https://images.velog.io/post-images/chris/18f010b0-276f-11e9-8a2a-c90b1e879aba/heilogo.svg">
+           alt="logo"
+           src="https://res.cloudinary.com/dvcuac7zg/image/upload/v1549858384/heihei/heilogo.svg">
       <img class="hands"
-           src="https://images.velog.io/post-images/chris/d2f9f340-276f-11e9-9cfc-1356462f1aeb/handicon.svg">
+           alt="hands"
+           src="https://res.cloudinary.com/dvcuac7zg/image/upload/v1549858404/heihei/handicon.svg">
       <div class="bio">
         안녕하세요.<br>
         이야기하는 디자이너<br>
@@ -19,7 +21,8 @@
       <a class="insta"
          @click="instaClick">
         <img class="insta__logo"
-             src="https://images.velog.io/post-images/chris/e392f430-2770-11e9-9cfc-1356462f1aeb/instagram-brands-3.svg">
+             alt="instagram logo"
+             src="https://res.cloudinary.com/dvcuac7zg/image/upload/v1549858423/heihei/instagram-brands-3.svg">
         <div class="insta__id">hei_hi_hei</div>
       </a>
     </div>
@@ -36,7 +39,8 @@
                }" />
         <div class="title">{{ item.title }}</div>
         <img class="arrow"
-             src="https://images.velog.io/post-images/chris/a3b24650-2774-11e9-8a2a-c90b1e879aba/arrowright.svg">
+             alt="arrow"
+             src="https://res.cloudinary.com/dvcuac7zg/image/upload/v1549858463/heihei/arrowright.svg">
       </div>
     </div>
     <copy-right />
@@ -58,7 +62,7 @@ export default {
           title: 'motion',
           color: '#E53786',
           url: this.scaledImage(
-            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549214397/heihei/%E1%84%89%E1%85%A5%E1%86%AB_thumbnail_1.jpg',
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549214397/heihei/%E1%84%89%E1%85%A5%E1%86%AB_thumbnail_1.webp',
           ),
           parallaxMinY: 10,
           parallaxMaxY: 40,
@@ -68,7 +72,7 @@ export default {
           title: 'illust',
           color: '#F5F5F5',
           url: this.scaledImage(
-            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287328/heihei/monami_card_thumbnail-1.jpg',
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287328/heihei/monami_card_thumbnail-1.webp',
           ),
           parallaxMinY: 11,
           parallaxMaxY: 50,
@@ -78,7 +82,7 @@ export default {
           title: 'graphic',
           color: '#C9CBCA',
           url: this.scaledImage(
-            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290397/heihei/somul_card_thumbnail-1.jpg',
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290397/heihei/somul_card_thumbnail-1.webp',
           ),
           parallaxMinY: 0,
           parallaxMaxY: 23,
@@ -88,7 +92,7 @@ export default {
           title: 'branding',
           color: '#F9E15C',
           url: this.scaledImage(
-            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290123/heihei/jam_card_thumbnail.jpg',
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290123/heihei/jam_card_thumbnail.webp',
           ),
           parallaxMinY: 5,
           parallaxMaxY: 50,
@@ -98,7 +102,7 @@ export default {
           title: 'etc',
           color: '#F7F7F7',
           url: this.scaledImage(
-            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290073/heihei/chima_card_thumbnail.jpg',
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549290073/heihei/chima_card_thumbnail.webp',
           ),
           parallaxMinY: 28,
           parallaxMaxY: 60,
@@ -192,7 +196,8 @@ export default {
       height: 20px;
       cursor: pointer;
       /* touch-action: none; */
-      &:active, &:hover {
+      &:active,
+      &:hover {
         background-color: rgba(0, 0, 0, 0.1);
         border-radius: 1px;
       }
