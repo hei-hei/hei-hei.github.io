@@ -29,7 +29,7 @@
       기존에 있던 에디터 소핫의 캐릭터를 두명으로 각자의 개성을 살리도록 리디자인했으며 색감도 기존의 보라색을 유지하면서 분위기를 밝히기 위해 붉은 보라색에서 푸른보라로 선명해 보일 수 있도록 수정했습니다.
     </div>
     <img class="image"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282765/heihei/%E1%84%89%E1%85%A9%E1%84%92%E1%85%A1%E1%86%BA_%E1%84%90%E1%85%A6%E1%86%B7%E1%84%91%E1%85%B3%E1%86%AF%E1%84%85%E1%85%B5%E1%86%BA_%E1%84%86%E1%85%A9%E1%84%8B%E1%85%B3%E1%86%B7%E1%84%8C%E1%85%B5%E1%86%B8.jpg'">
+         :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282765/heihei/%E1%84%89%E1%85%A9%E1%84%92%E1%85%A1%E1%86%BA_%E1%84%90%E1%85%A6%E1%86%B7%E1%84%91%E1%85%B3%E1%86%AF%E1%84%85%E1%85%B5%E1%86%BA_%E1%84%86%E1%85%A9%E1%84%8B%E1%85%B3%E1%86%B7%E1%84%8C%E1%85%B5%E1%86%B8.jpg')">
     <iframe src="https://player.vimeo.com/video/315238701?autoplay=1&loop=1&muted=1&autopause=0&title=0&byline=0"
             ref="player"
             id="player"
@@ -102,18 +102,13 @@
          :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282754/heihei/donhot_yeah.gif'">
     <img class="image"
          :style="{'margin-top': '8px'}"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282758/heihei/%E1%84%89%E1%85%A9%E1%84%92%E1%85%A1%E1%86%BA_%E1%84%91%E1%85%B3%E1%84%87%E1%85%A2.jpg'">
+         :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282758/heihei/%E1%84%89%E1%85%A9%E1%84%92%E1%85%A1%E1%86%BA_%E1%84%91%E1%85%B3%E1%84%87%E1%85%A2.jpg')">
     <copy-right />
   </section>
 </template>
 
 <script>
-import CopyRight from '@/components/CopyRight.vue'
-
 export default {
-  components: {
-    CopyRight,
-  },
   data: () => ({
     width: window.innerWidth >= 500 ? 500 : window.innerWidth,
   }),
@@ -124,9 +119,6 @@ export default {
   methods: {
     windowResized() {
       this.width = window.innerWidth <= 500 ? window.innerWidth : this.width
-    },
-    scaledImage(url) {
-      return url.slice(0, 50) + 'c_scale/' + url.slice(50)
     },
   },
   beforeDestroy() {

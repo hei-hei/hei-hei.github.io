@@ -17,7 +17,7 @@
       </div>
     </div>
     <img class="image"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549285243/heihei/dode_logo.jpg'">
+         :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549285243/heihei/dode_logo.jpg')">
     <div class="text">
       디자인 코드를 공부하는 스터디모임의 로고입니다. 프레이머X를 공부하는 모임이기 때문에 uxui에 많이 사용되는 에셋들을 단순화 시켜 로고안의 각 알파벳 사이사이에 넣었습니다.<br><br>
 
@@ -29,12 +29,7 @@
 </template>
 
 <script>
-import CopyRight from '@/components/CopyRight.vue'
-
 export default {
-  components: {
-    CopyRight,
-  },
   data: () => ({
     width: window.innerWidth,
   }),
@@ -45,9 +40,6 @@ export default {
   methods: {
     windowResized() {
       this.width = window.innerWidth
-    },
-    scaledImage(url) {
-      return url.slice(0, 50) + 'c_scale/' + url.slice(50)
     },
   },
   beforeDestroy() {

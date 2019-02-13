@@ -29,18 +29,13 @@
       기존의 컨텐츠와는 달리 무거운 이야기를 전달하기 때문에 어두운 톤과 거친 질감을 사용했습니다.
     </div>
     <img class="image"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549283170/heihei/%E1%84%8B%E1%85%A1%E1%84%8F%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B3_temp_all.jpg'">
+         :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549283170/heihei/%E1%84%8B%E1%85%A1%E1%84%8F%E1%85%A1%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B3_temp_all.jpg')">
     <copy-right />
   </section>
 </template>
 
 <script>
-import CopyRight from '@/components/CopyRight.vue'
-
 export default {
-  components: {
-    CopyRight,
-  },
   data: () => ({
     width: window.innerWidth,
   }),
@@ -51,9 +46,6 @@ export default {
   methods: {
     windowResized() {
       this.width = window.innerWidth
-    },
-    scaledImage(url) {
-      return url.slice(0, 50) + 'c_scale/' + url.slice(50)
     },
   },
   beforeDestroy() {

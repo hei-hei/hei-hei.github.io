@@ -31,7 +31,7 @@
     <img class="image"
          :style="{'margin-top': '8px'}"
          :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549262280/heihei/%E1%84%87%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A2%E1%86%A8%E1%84%85%E1%85%A5%E1%86%AB_%E1%84%86%E1%85%A9%E1%86%A8%E1%84%8B%E1%85%A5%E1%86%B8_%E1%84%91%E1%85%A9%E1%84%89%E1%85%B3%E1%84%90%E1%85%A5.jpg')">
-         <img class="image"
+    <img class="image"
          :style="{'margin-top': '8px'}"
          :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549262279/heihei/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2019-02-04_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_1.54.41_%E1%84%89%E1%85%A1%E1%84%87%E1%85%A9%E1%86%AB.jpg')">
     <copy-right />
@@ -39,12 +39,7 @@
 </template>
 
 <script>
-import CopyRight from '@/components/CopyRight.vue'
-
 export default {
-  components: {
-    CopyRight,
-  },
   data: () => ({
     width: window.innerWidth,
   }),
@@ -55,9 +50,6 @@ export default {
   methods: {
     windowResized() {
       this.width = window.innerWidth
-    },
-    scaledImage(url) {
-      return url.slice(0, 50) + 'c_scale,q_100/' + url.slice(50)
     },
   },
   beforeDestroy() {

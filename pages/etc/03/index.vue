@@ -46,14 +46,14 @@
     </video> -->
     <img class="image"
          :style="{'margin-top': '8px'}"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287791/heihei/%E1%84%86%E1%85%A9%E1%84%89%E1%85%A7%E1%86%AB_01_%E1%84%87%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%BC.jpg'">
+         :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287791/heihei/%E1%84%86%E1%85%A9%E1%84%89%E1%85%A7%E1%86%AB_01_%E1%84%87%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%BC.jpg')">
     <div class="text">
       c4d로 공간감과 구성을 표현하기 위해 알파벳을 응용해서 영상과 이미지를 만들었습니다.
     </div>
     <img class="image"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287789/heihei/baaaaaaam_light.jpg'">
+         :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287789/heihei/baaaaaaam_light.jpg')">
     <img class="image"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287789/heihei/baaaam_rigging.jpg'">
+         :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287789/heihei/baaaam_rigging.jpg')">
     <div class="text">
       다양한 질감표현을 연습하기 위해 한 가지 오브젝트에 다양한
       효과와 라이트를 넣은 이미지입니다.
@@ -98,12 +98,7 @@
 </template>
 
 <script>
-import CopyRight from '@/components/CopyRight.vue'
-
 export default {
-  components: {
-    CopyRight,
-  },
   data: () => ({
     width: window.innerWidth >= 500 ? 500 : window.innerWidth,
   }),
@@ -114,9 +109,6 @@ export default {
   methods: {
     windowResized() {
       this.width = window.innerWidth <= 500 ? window.innerWidth : this.width
-    },
-    scaledImage(url) {
-      return url.slice(0, 50) + 'c_scale/' + url.slice(50)
     },
   },
   beforeDestroy() {

@@ -34,7 +34,7 @@
       카메라와 마트의 콜라보인 연애 플레이 리스트의 예능입니다. 카메라와 긴밀한 컨셉을 가지고 있는 예능이기 때문에, 카메라 화면의 에셋들을 적극 활용한 시안들을 제작했습니다.
     </div>
     <img class="image"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/c_scale,w_960/v1549281009/heihei/%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC_%E1%84%8D%E1%85%B5%E1%86%A8%E1%84%92%E1%85%B5%E1%84%86%E1%85%A7%E1%86%AB%E1%84%8C%E1%85%AE%E1%86%A8%E1%84%82%E1%85%B3%E1%86%AB%E1%84%83%E1%85%A1_%E1%84%91%E1%85%A9%E1%84%89%E1%85%B3%E1%84%90%E1%85%A5.jpg'">
+         :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549281009/heihei/%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC_%E1%84%8D%E1%85%B5%E1%86%A8%E1%84%92%E1%85%B5%E1%84%86%E1%85%A7%E1%86%AB%E1%84%8C%E1%85%AE%E1%86%A8%E1%84%82%E1%85%B3%E1%86%AB%E1%84%83%E1%85%A1_%E1%84%91%E1%85%A9%E1%84%89%E1%85%B3%E1%84%90%E1%85%A5.jpg')">
     <div class="text">
       가장 위의 시안이 채택되었으며, 클라이언트분께서 배틀그라운드이 같이 fps 게임의 느낌이 들기를 원했기 때문에 거친 질감과 대비가 드라마틱하게 보여질 수 있도록 사진을 보정하고 전체 색감을 보정했습니다.<br><br>
 
@@ -45,12 +45,7 @@
 </template>
 
 <script>
-import CopyRight from '@/components/CopyRight.vue'
-
 export default {
-  components: {
-    CopyRight,
-  },
   data: () => ({
     width: window.innerWidth,
   }),
@@ -61,9 +56,6 @@ export default {
   methods: {
     windowResized() {
       this.width = window.innerWidth
-    },
-    scaledImage(url) {
-      return url.slice(0, 50) + 'c_scale/' + url.slice(50)
     },
   },
   beforeDestroy() {

@@ -30,12 +30,7 @@
 </template>
 
 <script>
-import CopyRight from '@/components/CopyRight.vue'
-
 export default {
-  components: {
-    CopyRight,
-  },
   data() {
     return {
       width: window.innerWidth,
@@ -46,7 +41,7 @@ export default {
           number: '01',
           color: '#E53786',
           url: this.scaledImage(
-            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549214397/heihei/%E1%84%89%E1%85%A5%E1%86%AB_thumbnail_1.webp',
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549214397/heihei/%E1%84%89%E1%85%A5%E1%86%AB_thumbnail_1.jpg',
           ),
         },
         {
@@ -63,7 +58,7 @@ export default {
           number: '03',
           color: '#181017',
           url: this.scaledImage(
-            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549222284/heihei/%E1%84%8D%E1%85%A1%E1%86%AB%E1%84%8D%E1%85%A1%E1%86%AF_card_thumbnail.webp',
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549222284/heihei/%E1%84%8D%E1%85%A1%E1%86%AB%E1%84%8D%E1%85%A1%E1%86%AF_card_thumbnail.jpg',
           ),
         },
         {
@@ -72,7 +67,7 @@ export default {
           number: '04',
           color: '#311EAD',
           url: this.scaledImage(
-            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287300/heihei/aday_card_thumbnail-1.webp',
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287300/heihei/aday_card_thumbnail-1.jpg',
           ),
         },
         {
@@ -81,7 +76,7 @@ export default {
           number: '05',
           color: '#1D1B1E',
           url: this.scaledImage(
-            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287299/heihei/jjo_card_thumbnail-1.webp',
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287299/heihei/jjo_card_thumbnail-1.jpg',
           ),
         },
         {
@@ -90,7 +85,7 @@ export default {
           number: '06',
           color: '#5062B5',
           url: this.scaledImage(
-            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287314/heihei/myroom_card_thumbnail-1.webp',
+            'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287314/heihei/myroom_card_thumbnail-1.jpg',
           ),
         },
       ],
@@ -103,9 +98,6 @@ export default {
   methods: {
     windowResized() {
       this.width = window.innerWidth
-    },
-    scaledImage(url) {
-      return url && url.slice(0, 50) + 'c_scale,w_750/' + url.slice(50)
     },
   },
   beforeDestroy() {

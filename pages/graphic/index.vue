@@ -26,12 +26,7 @@
 </template>
 
 <script>
-import CopyRight from '@/components/CopyRight.vue'
-
 export default {
-  components: {
-    CopyRight,
-  },
   data() {
     return {
       width: window.innerWidth,
@@ -64,9 +59,6 @@ export default {
   methods: {
     windowResized() {
       this.width = window.innerWidth
-    },
-    scaledImage(url) {
-      return url && url.slice(0, 50) + 'c_scale,w_750/' + url.slice(50)
     },
   },
   beforeDestroy() {

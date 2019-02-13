@@ -15,7 +15,7 @@
       </div>
     </div>
     <img class="image"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287794/heihei/%E1%84%80%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%B7%E1%84%89%E1%85%B3%E1%84%90%E1%85%A5%E1%84%83%E1%85%B5_chracter.jpg'">
+         :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287794/heihei/%E1%84%80%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%B7%E1%84%89%E1%85%B3%E1%84%90%E1%85%A5%E1%84%83%E1%85%B5_chracter.jpg')">
     <div class="text">
       만약 수상한 안개가 퍼져있는 이상한 숲에서 아이들이 살고있다면 어떤 모습을 가지고 있을까?, 각자의 아이들은 어떤 이야기가 있을까? 라는 아이디어를 가지고 디자인을 했습니다.<br><br>
 
@@ -28,7 +28,7 @@
       로우폴리곤으로 제작할 계획이였기 때문에 최대한 단순화하면서도 빅토리아시대의 복식의 느낌을 강하게 내기 위해서 실제 과거의 사진들을 계속 단순화 하는 스케치를 진행하면서 디자인했습니다.
     </div>
     <img class="image"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287796/heihei/%E1%84%80%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%B7%E1%84%89%E1%85%B3%E1%84%90%E1%85%A5%E1%84%83%E1%85%B5_sketch.jpg'">
+         :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287796/heihei/%E1%84%80%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%B7%E1%84%89%E1%85%B3%E1%84%90%E1%85%A5%E1%84%83%E1%85%B5_sketch.jpg')">
     <div class="text">
       초기의 디자인 스케치와 빅토리아 시대의 복식에 대해 이해하기 위한 스케치입니다.
     </div>
@@ -37,12 +37,7 @@
 </template>
 
 <script>
-import CopyRight from '@/components/CopyRight.vue'
-
 export default {
-  components: {
-    CopyRight,
-  },
   data: () => ({
     width: window.innerWidth,
   }),
@@ -53,9 +48,6 @@ export default {
   methods: {
     windowResized() {
       this.width = window.innerWidth
-    },
-    scaledImage(url) {
-      return url.slice(0, 50) + 'c_scale/' + url.slice(50)
     },
   },
   beforeDestroy() {

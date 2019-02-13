@@ -40,21 +40,16 @@
     </div>
     <img class="image"
          :style="{'margin-top': '8px'}"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282231/heihei/jam_profileBGBG.jpg'">
+         :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282231/heihei/jam_profileBGBG.jpg')">
     <img class="image"
          :style="{'margin-top': '8px'}"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282230/heihei/jam_baby_all2.jpg'">
+         :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549282230/heihei/jam_baby_all2.jpg')">
     <copy-right />
   </section>
 </template>
 
 <script>
-import CopyRight from '@/components/CopyRight.vue'
-
 export default {
-  components: {
-    CopyRight,
-  },
   data: () => ({
     width: window.innerWidth,
   }),
@@ -66,9 +61,6 @@ export default {
   methods: {
     windowResized() {
       this.width = window.innerWidth
-    },
-    scaledImage(url) {
-      return url.slice(0, 50) + 'c_scale/' + url.slice(50)
     },
   },
   beforeDestroy() {

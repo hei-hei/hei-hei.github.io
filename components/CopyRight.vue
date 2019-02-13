@@ -8,11 +8,10 @@
 .copyright {
   line-height: 18px;
   font-size: 12px;
-  color: rgb(156, 156, 156);
+  color: black;
   text-align: center;
   min-height: 100px;
   display: grid;
   align-items: center;
-  background-color: white;
 }
 </style>

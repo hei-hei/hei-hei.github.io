@@ -51,7 +51,7 @@
       엔터테이먼트의 엔터와 키보드자판의 엔터의 유사성을 이용해서 키보드를 누르는 모션을 주고 전반적인 로고의 디자인 또한 버튼의 느낌이 나도록 디자인했습니다.
     </div>
     <img class="image"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549283179/heihei/pikienter_logo.jpg'">
+         :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549283179/heihei/pikienter_logo.jpg')">
     <div class="text">
       가장 위에서부터 영상용 로고, 일반로고, 흑,백버전 로고 베리에이션입니다.
     </div>
@@ -60,12 +60,7 @@
 </template>
 
 <script>
-import CopyRight from '@/components/CopyRight.vue'
-
 export default {
-  components: {
-    CopyRight,
-  },
   data: () => ({
     width: window.innerWidth >= 500 ? 500 : window.innerWidth,
   }),
@@ -76,9 +71,6 @@ export default {
   methods: {
     windowResized() {
       this.width = window.innerWidth <= 500 ? window.innerWidth : this.width
-    },
-    scaledImage(url) {
-      return url.slice(0, 50) + 'c_scale/' + url.slice(50)
     },
   },
   beforeDestroy() {

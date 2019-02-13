@@ -26,23 +26,18 @@
     <div class="text">
       가벼운 지식들을 다루는 에디터의 브랜드를 디자인했습니다.<br><br>
 
-지식탐탐 시리즈 같은 경우에는 가볍지만 비교적 전문적인 내용을 다루기 때문에 고서적의 컨셉으로 디자인했습니다.<br><br>
+      지식탐탐 시리즈 같은 경우에는 가볍지만 비교적 전문적인 내용을 다루기 때문에 고서적의 컨셉으로 디자인했습니다.<br><br>
 
-꿀팁박스 시리즈는 유저들과 함께 소통하면서 서로의 꿀팁을 공유하는 시리즈이기 때문에 좀 더 가볍게 즐길 수 있도록 낙서를 이용해서 디자인했습니다.
+      꿀팁박스 시리즈는 유저들과 함께 소통하면서 서로의 꿀팁을 공유하는 시리즈이기 때문에 좀 더 가볍게 즐길 수 있도록 낙서를 이용해서 디자인했습니다.
     </div>
     <img class="image"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549283249/heihei/tamtam_temp_all.jpg'">
+         :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549283249/heihei/tamtam_temp_all.jpg')">
     <copy-right />
   </section>
 </template>
 
 <script>
-import CopyRight from '@/components/CopyRight.vue'
-
 export default {
-  components: {
-    CopyRight,
-  },
   data: () => ({
     width: window.innerWidth,
   }),
@@ -53,9 +48,6 @@ export default {
   methods: {
     windowResized() {
       this.width = window.innerWidth
-    },
-    scaledImage(url) {
-      return url.slice(0, 50) + 'c_scale/' + url.slice(50)
     },
   },
   beforeDestroy() {

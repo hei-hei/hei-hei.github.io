@@ -17,12 +17,12 @@
       </div>
     </div>
     <img class="image"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287789/heihei/typo_d_%E1%84%80%E1%85%A5%E1%86%B7%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%8E%E1%85%B5%E1%84%86%E1%85%A1%E1%84%8E%E1%85%A6_%E1%84%86%E1%85%A9%E1%84%8B%E1%85%B3%E1%86%B7.jpg'">
+         :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287789/heihei/typo_d_%E1%84%80%E1%85%A5%E1%86%B7%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%8E%E1%85%B5%E1%84%86%E1%85%A1%E1%84%8E%E1%85%A6_%E1%84%86%E1%85%A9%E1%84%8B%E1%85%B3%E1%86%B7.jpg')">
     <div class="text">
       개인적으로 느꼈던 밴드 검정치마의 특유의 분위기인, 무심하면서도 단단한 느낌을 폰트로 만들어봤습니다.
     </div>
     <img class="image"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287789/heihei/typo_d_%E1%84%80%E1%85%A5%E1%86%B7%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%8E%E1%85%B5%E1%84%86%E1%85%A1%E1%84%8E%E1%85%A6.jpg'">
+         :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287789/heihei/typo_d_%E1%84%80%E1%85%A5%E1%86%B7%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%8E%E1%85%B5%E1%84%86%E1%85%A1%E1%84%8E%E1%85%A6.jpg')">
     <div class="text">
       검정치마의 곡 “i like watching you go” 의 가사 일부분입니다.
     </div>
@@ -31,12 +31,7 @@
 </template>
 
 <script>
-import CopyRight from '@/components/CopyRight.vue'
-
 export default {
-  components: {
-    CopyRight,
-  },
   data: () => ({
     width: window.innerWidth,
   }),
@@ -47,9 +42,6 @@ export default {
   methods: {
     windowResized() {
       this.width = window.innerWidth
-    },
-    scaledImage(url) {
-      return url.slice(0, 50) + 'c_scale/' + url.slice(50)
     },
   },
   beforeDestroy() {
