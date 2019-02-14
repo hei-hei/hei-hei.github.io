@@ -38,7 +38,12 @@ module.exports = {
       //   href: 'https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css',
       // },
     ],
-    // script: [{ src: 'https://player.vimeo.com/api/player.js' }],
+    script: [
+      {
+        src: 'https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver',
+        crossorigin: 'anonymous',
+      },
+    ],
   },
 
   loading: { color: '#3B8070' },

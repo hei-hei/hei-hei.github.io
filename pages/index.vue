@@ -48,6 +48,7 @@
 </template>
 
 <script>
+import UAParser from 'ua-parser-js'
 export default {
   data() {
     return {
@@ -107,6 +108,7 @@ export default {
     }
   },
   mounted() {
+    window.addEventListener('scroll', this.scrolled)
     const imgs = [
       'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549214397/heihei/%E1%84%89%E1%85%A5%E1%86%AB_thumbnail_1.jpg',
       'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549222284/heihei/%E1%84%8D%E1%85%A1%E1%86%AB%E1%84%8D%E1%85%A1%E1%86%AF_card_thumbnail.jpg',
@@ -204,35 +206,6 @@ export default {
       'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287789/heihei/baaaaaaam_light.jpg',
       'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287789/heihei/baaaam_rigging.jpg',
     ].map(url => this.scaledImage(url))
-    const routes = [
-      '_nuxt/pages/motion/index.js',
-      '_nuxt/pages/motion/01/index.js',
-      '_nuxt/pages/motion/02/index.js',
-      '_nuxt/pages/motion/03/index.js',
-      '_nuxt/pages/motion/04/index.js',
-      '_nuxt/pages/motion/05/index.js',
-      '_nuxt/pages/motion/06/index.js',
-      '_nuxt/pages/illust/index.js',
-      '_nuxt/pages/illust/01/index.js',
-      '_nuxt/pages/illust/02/index.js',
-      '_nuxt/pages/illust/03/index.js',
-      '_nuxt/pages/illust/04/index.js',
-      '_nuxt/pages/illust/05/index.js',
-      '_nuxt/pages/graphic/index.js',
-      '_nuxt/pages/graphic/01/index.js',
-      '_nuxt/pages/graphic/02/index.js',
-      '_nuxt/pages/branding/index.js',
-      '_nuxt/pages/branding/01/index.js',
-      '_nuxt/pages/branding/02/index.js',
-      '_nuxt/pages/branding/03/index.js',
-      '_nuxt/pages/branding/04/index.js',
-      '_nuxt/pages/branding/05/index.js',
-      '_nuxt/pages/branding/06/index.js',
-      '_nuxt/pages/etc/index.js',
-      '_nuxt/pages/etc/01/index.js',
-      '_nuxt/pages/etc/02/index.js',
-      '_nuxt/pages/etc/03/index.js',
-    ]
     const others = [
       'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549858725/heihei/arrowleft.svg',
       'https://images.velog.io/post-images/chris/34975800-2788-11e9-a89e-513e433f9a41/arrowleft.svg',
@@ -277,11 +250,12 @@ export default {
       'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549354415/heihei/image8.jpg',
       'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549354415/heihei/image9.jpg',
     ]
+    const ua = new UAParser().getResult()
+    if (ua.browser.name === 'Safari' && ua.os.name === 'Mac OS') return
+    // console.log('hi!')
     this.quicklink({
-      urls: [...imgs, ...others, ...routes],
-      // priority: true,
+      urls: [...imgs, ...others],
     })
-    window.addEventListener('scroll', this.scrolled)
   },
   destroyed() {
     window.removeEventListener('scroll', this.scrolled)
