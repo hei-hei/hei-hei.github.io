@@ -82,13 +82,13 @@
       그래서 8bit컨셉의 연애 하루 전 특별영상을 만들었습니다.
     </div>
     <img class="image"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549285762/heihei/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA01.jpg'">
+         :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549285762/heihei/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA01.jpg')">
     <img class="image"
          :style="{'margin-top': '8px'}"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549285762/heihei/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA02.jpg'">
+         :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549285762/heihei/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA02.jpg')">
     <img class="image"
          :style="{'margin-top': '8px'}"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549285762/heihei/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA03.jpg'">
+         :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549285762/heihei/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA03.jpg')">
     <div class="text">
       원래 애니메이션의 분위기가 수채화느낌이 강한 순정만화에 가까웠기 때문에 도트디자인으로 진행했을때 분위기가 따로 놀지 않도록 색감을 기존의 색상보다 더 파스텔톤으로 잡았습니다.<br><br>
 
@@ -97,7 +97,7 @@
       욱, 여름커플과 하은, 연우커플각각의 대표적인 색상인 주홍빛 도는 노랑, 파랑, 연두, 보라 이 네가지 색상이 있어서 그 부분 또한 강조될 수 있도록 디자인했습니다.
     </div>
     <img class="image"
-         :src="'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549285764/heihei/source_all.jpg'">
+         :src="scaledImage('https://res.cloudinary.com/dvcuac7zg/image/upload/v1549285764/heihei/source_all.jpg')">
     <copy-right />
   </section>
 </template>

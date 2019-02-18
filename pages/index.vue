@@ -206,6 +206,7 @@ export default {
       'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287789/heihei/baaaaaaam_light.jpg',
       'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549287789/heihei/baaaam_rigging.jpg',
     ].map(url => this.scaledImage(url))
+
     const others = [
       'https://res.cloudinary.com/dvcuac7zg/image/upload/v1549858725/heihei/arrowleft.svg',
       'https://images.velog.io/post-images/chris/34975800-2788-11e9-a89e-513e433f9a41/arrowleft.svg',
