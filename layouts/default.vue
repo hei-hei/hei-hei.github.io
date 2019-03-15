@@ -19,8 +19,8 @@ export default {
       '%c          ',
       'font-size: 300px; background: url(https://media.giphy.com/media/vzO0Vc8b2VBLi/giphy.gif) no-repeat; background-size: contain;',
     )
-    console.log('%c구직중입니다. 🤪', 'color: green; font-size: 18px')
-    console.log('%c👉 https://github.com/ysm0622', 'color: green; font-size: 12px')
+    console.log('%cFeel free to contact me! 🤪', 'color: green; font-size: 18px')
+    console.log('%cDeveloper 👉 https://github.com/ysm0622', 'color: green; font-size: 12px')
   },
 }
 </script>
