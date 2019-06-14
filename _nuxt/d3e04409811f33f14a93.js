@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[25],{238:function(t,e,n){"use strict";n.r(e);var c={created:function(){this.$router.push("/"),window.open("https://www.youtube.com/watch?v=01IEeUrPpLc")}},o=n(13),component=Object(o.a)(c,function(){var t=this.$createElement;return(this._self._c||t)("div")},[],!1,null,null,null);e.default=component.exports}}]);

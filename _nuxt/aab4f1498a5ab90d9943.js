@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[36],{243:function(n,e,t){"use strict";t.r(e);var o={created:function(){this.$router.push("/"),window.open("http://dongascience.donga.com/news.php?idx=18359")}},c=t(13),component=Object(c.a)(o,function(){var n=this.$createElement;return(this._self._c||n)("div")},[],!1,null,null,null);e.default=component.exports}}]);
