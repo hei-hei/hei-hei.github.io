@@ -15,20 +15,20 @@
   },
   "dependencies": {
     "gh-pages": "^2.0.1",
-    "intersection-observer": "^0.5.1",
-    "node-sass": "^4.11.0",
-    "nuxt": "^2.4.2",
+    "intersection-observer": "^0.7.0",
+    "node-sass": "^4.12.0",
+    "nuxt": "^2.8.1",
     "quicklink": "^1.0.0",
     "sass-loader": "^7.1.0",
-    "terser": "^3.14.1",
-    "ua-parser-js": "^0.7.19",
-    "vue-fragment": "^1.5.0"
+    "terser": "^4.0.0",
+    "ua-parser-js": "^0.7.20",
+    "vue-fragment": "^1.5.1"
   },
   "devDependencies": {
-    "cross-env": "^5.0.1",
+    "cross-env": "^5.2.0",
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.13.0",
-    "eslint-loader": "^2.1.1",
-    "eslint-plugin-vue": "^5.1.0"
+    "eslint": "^5.16.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-vue": "^5.2.2"
   }
 }
